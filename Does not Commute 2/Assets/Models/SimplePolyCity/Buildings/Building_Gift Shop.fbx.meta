@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 5f32d19a4eef7bc48a8bab4bd4819f19
+guid: 484a0383c8ed8ec458a4d0b2d851e5b4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Building_Bakery
+    2100000: Building_Gift Shop
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Building_Bakery
+    4300000: Building_Gift Shop
   externalObjects: {}
   materials:
     importMaterials: 1
