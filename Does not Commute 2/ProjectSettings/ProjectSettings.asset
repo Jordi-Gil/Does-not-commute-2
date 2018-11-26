@@ -570,7 +570,19 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 1
   webGLLinkerTarget: 1
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: CROSS_PLATFORM_INPUT;BCG_RCC
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT;BCG_RCC
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT;BCG_RCC
+    13: BCG_RCC
+    14: CROSS_PLATFORM_INPUT;MOBILE_INPUT;BCG_RCC
+    18: BCG_RCC
+    19: BCG_RCC
+    21: BCG_RCC
+    23: BCG_RCC
+    25: BCG_RCC
+    26: BCG_RCC
+    27: BCG_RCC
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

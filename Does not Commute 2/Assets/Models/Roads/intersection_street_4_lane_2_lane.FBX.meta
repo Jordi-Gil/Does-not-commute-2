@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 31211a1cc9d1c954bb5ab6776389c95b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box003
+    100006: Box004
+    100008: Box005
+    100010: Box006
+    100012: Box007
+    100014: Box008
+    100016: Box009
+    100018: Box010
+    100020: intersection street 4 lane - 2 lane trafficlights
+    100022: intersection street 4 lane - 2 lane trafficlights - 1 green
+    100024: intersection street 4 lane - 2 lane trafficlights - 1 red
+    100026: intersection street 4 lane - 2 lane trafficlights - 1 yellow
+    100028: intersection street 4 lane - 2 lane trafficlights - 10 green
+    100030: intersection street 4 lane - 2 lane trafficlights - 10 red
+    100032: intersection street 4 lane - 2 lane trafficlights - 11 green
+    100034: intersection street 4 lane - 2 lane trafficlights - 11 red
+    100036: intersection street 4 lane - 2 lane trafficlights - 12 green
+    100038: intersection street 4 lane - 2 lane trafficlights - 12 red
+    100040: intersection street 4 lane - 2 lane trafficlights - 13 green
+    100042: intersection street 4 lane - 2 lane trafficlights - 13 red
+    100044: intersection street 4 lane - 2 lane trafficlights - 14 green
+    100046: intersection street 4 lane - 2 lane trafficlights - 14 red
+    100048: intersection street 4 lane - 2 lane trafficlights - 2 green
+    100050: intersection street 4 lane - 2 lane trafficlights - 2 red
+    100052: intersection street 4 lane - 2 lane trafficlights - 2 yellow
+    100054: intersection street 4 lane - 2 lane trafficlights - 3 green
+    100056: intersection street 4 lane - 2 lane trafficlights - 3 red
+    100058: intersection street 4 lane - 2 lane trafficlights - 3 yellow
+    100060: intersection street 4 lane - 2 lane trafficlights - 4 green
+    100062: intersection street 4 lane - 2 lane trafficlights - 4 red
+    100064: intersection street 4 lane - 2 lane trafficlights - 4 yellow
+    100066: intersection street 4 lane - 2 lane trafficlights - 5 green
+    100068: intersection street 4 lane - 2 lane trafficlights - 5 red
+    100070: intersection street 4 lane - 2 lane trafficlights - 5 yellow
+    100072: intersection street 4 lane - 2 lane trafficlights - 6 green
+    100074: intersection street 4 lane - 2 lane trafficlights - 6 red
+    100076: intersection street 4 lane - 2 lane trafficlights - 6 yellow
+    100078: intersection street 4 lane - 2 lane trafficlights - 7 green
+    100080: intersection street 4 lane - 2 lane trafficlights - 7 red
+    100082: intersection street 4 lane - 2 lane trafficlights - 8 green
+    100084: intersection street 4 lane - 2 lane trafficlights - 8 red
+    100086: intersection street 4 lane - 2 lane trafficlights - 9 green
+    100088: intersection street 4 lane - 2 lane trafficlights - 9 red
+    100090: intersection street 4 lane - 2 lane trafficlights 1
+    100092: //RootNode
+    400000: Box001
+    400002: Box002
+    400004: Box003
+    400006: Box004
+    400008: Box005
+    400010: Box006
+    400012: Box007
+    400014: Box008
+    400016: Box009
+    400018: Box010
+    400020: intersection street 4 lane - 2 lane trafficlights
+    400022: intersection street 4 lane - 2 lane trafficlights - 1 green
+    400024: intersection street 4 lane - 2 lane trafficlights - 1 red
+    400026: intersection street 4 lane - 2 lane trafficlights - 1 yellow
+    400028: intersection street 4 lane - 2 lane trafficlights - 10 green
+    400030: intersection street 4 lane - 2 lane trafficlights - 10 red
+    400032: intersection street 4 lane - 2 lane trafficlights - 11 green
+    400034: intersection street 4 lane - 2 lane trafficlights - 11 red
+    400036: intersection street 4 lane - 2 lane trafficlights - 12 green
+    400038: intersection street 4 lane - 2 lane trafficlights - 12 red
+    400040: intersection street 4 lane - 2 lane trafficlights - 13 green
+    400042: intersection street 4 lane - 2 lane trafficlights - 13 red
+    400044: intersection street 4 lane - 2 lane trafficlights - 14 green
+    400046: intersection street 4 lane - 2 lane trafficlights - 14 red
+    400048: intersection street 4 lane - 2 lane trafficlights - 2 green
+    400050: intersection street 4 lane - 2 lane trafficlights - 2 red
+    400052: intersection street 4 lane - 2 lane trafficlights - 2 yellow
+    400054: intersection street 4 lane - 2 lane trafficlights - 3 green
+    400056: intersection street 4 lane - 2 lane trafficlights - 3 red
+    400058: intersection street 4 lane - 2 lane trafficlights - 3 yellow
+    400060: intersection street 4 lane - 2 lane trafficlights - 4 green
+    400062: intersection street 4 lane - 2 lane trafficlights - 4 red
+    400064: intersection street 4 lane - 2 lane trafficlights - 4 yellow
+    400066: intersection street 4 lane - 2 lane trafficlights - 5 green
+    400068: intersection street 4 lane - 2 lane trafficlights - 5 red
+    400070: intersection street 4 lane - 2 lane trafficlights - 5 yellow
+    400072: intersection street 4 lane - 2 lane trafficlights - 6 green
+    400074: intersection street 4 lane - 2 lane trafficlights - 6 red
+    400076: intersection street 4 lane - 2 lane trafficlights - 6 yellow
+    400078: intersection street 4 lane - 2 lane trafficlights - 7 green
+    400080: intersection street 4 lane - 2 lane trafficlights - 7 red
+    400082: intersection street 4 lane - 2 lane trafficlights - 8 green
+    400084: intersection street 4 lane - 2 lane trafficlights - 8 red
+    400086: intersection street 4 lane - 2 lane trafficlights - 9 green
+    400088: intersection street 4 lane - 2 lane trafficlights - 9 red
+    400090: intersection street 4 lane - 2 lane trafficlights 1
+    400092: //RootNode
+    2100000: curb
+    2100002: sidewalk
+    2100004: grass
+    2100006: asphalt_normal
+    2100008: asphalt_line
+    2100010: No Name
+    2300000: Box001
+    2300002: Box002
+    2300004: Box003
+    2300006: Box004
+    2300008: Box005
+    2300010: Box006
+    2300012: Box007
+    2300014: Box008
+    2300016: Box009
+    2300018: Box010
+    2300020: intersection street 4 lane - 2 lane trafficlights 1
+    3300000: Box001
+    3300002: Box002
+    3300004: Box003
+    3300006: Box004
+    3300008: Box005
+    3300010: Box006
+    3300012: Box007
+    3300014: Box008
+    3300016: Box009
+    3300018: Box010
+    3300020: intersection street 4 lane - 2 lane trafficlights 1
+    4300000: intersection street 4 lane - 2 lane trafficlights
+    4300002: Box001
+    4300004: Box002
+    4300006: Box003
+    4300008: Box004
+    4300010: Box005
+    4300012: Box006
+    4300014: Box007
+    4300016: Box008
+    4300018: Box009
+    4300020: Box010
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: asphalt_line
+    second: {fileID: 2100006, guid: 329c2d71c1fb67c4898b63538454a08d, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: asphalt_normal
+    second: {fileID: 2100008, guid: 329c2d71c1fb67c4898b63538454a08d, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: curb
+    second: {fileID: 2100000, guid: 329c2d71c1fb67c4898b63538454a08d, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass
+    second: {fileID: 2100004, guid: 329c2d71c1fb67c4898b63538454a08d, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sidewalk
+    second: {fileID: 2100002, guid: 329c2d71c1fb67c4898b63538454a08d, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -2,6 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class CarWheels : System.Object
+{
+    public WheelCollider leftWheel;
+    public Transform leftWheelTransform;
+    public WheelCollider rightWheel;
+    public Transform rightWheelTransform;
+    public bool motor;
+    public bool steering;
+    public bool rear;
+}
+
 public class CarController : MonoBehaviour
 {
 
@@ -10,27 +22,26 @@ public class CarController : MonoBehaviour
     private float handbrakeInput;
     private float steerInput;
     private float steeringAngle;
+    private float motorTorque;
+    
 
     public Rigidbody carBody;
-
-    public WheelCollider frontDriverW, frontPassengerW;
-    public WheelCollider rearDriverW, rearPassengerW;
-    public Transform frontDriverT, frontPassengerT;
-    public Transform rearDriverT, rearPassengerT;
 
     public float maxSteerAngle = 30;
     public float motorForce = 400;
     public float brakeForce = 2500f;
     public float brake = 2500f;
 
+    public List<CarWheels> Info_Axis;
+
     private void Start()
     {
-        float massWheel = carBody.mass / 20f;
-
-        frontDriverW.mass    = massWheel;
-        frontPassengerW.mass = massWheel;
-        rearDriverW.mass     = massWheel;
-        rearPassengerW.mass  = massWheel;
+        float massWheel = carBody.mass / 10f;
+        foreach (CarWheels carAxis in Info_Axis) {
+            carAxis.leftWheel.mass = massWheel;
+            carAxis.rightWheel.mass = massWheel;
+        }
+        
     }
 
     // This function is called every fixed framerate frame.
@@ -44,42 +55,62 @@ public class CarController : MonoBehaviour
         Accelerate();
         Braking();
         UpdateWheelPoses();
-
     }
 
     private void GetInput()
     {
         gasInput = Input.GetAxis("Vertical");
-        brakeInput = Mathf.Clamp01(-Input.GetAxis("Vertical"));
-        handbrakeInput = Input.GetKey(KeyCode.Space) ? 1f : 0f; 
         steerInput = Input.GetAxis("Horizontal");
+        brakeInput = Mathf.Clamp01(-Input.GetAxis("Vertical"));
+        handbrakeInput = Mathf.Abs(Input.GetAxis("Jump"));
     }
 
     private void Steer()
     {
         steeringAngle = maxSteerAngle * steerInput;
-        frontDriverW.steerAngle = steeringAngle;
-        frontPassengerW.steerAngle = steeringAngle;
+        foreach (CarWheels carAxis in Info_Axis) {
+            if (carAxis.steering) {
+                carAxis.leftWheel.steerAngle = steeringAngle;
+                carAxis.rightWheel.steerAngle = steeringAngle;
+            }
+        }
     }
 
     private void Accelerate()
     {
-        frontDriverW.motorTorque = gasInput * motorForce;
-        frontPassengerW.motorTorque = gasInput * motorForce;
+        motorTorque = motorForce * gasInput;
+        foreach (CarWheels carAxis in Info_Axis)
+        {
+            if (carAxis.motor)
+            {
+                carAxis.leftWheel.motorTorque = motorTorque;
+                carAxis.rightWheel.motorTorque = motorTorque;
+            }
+        }
     }
 
     private void Braking()
     {
-        if (handbrakeInput > 0.1f)
+        if (handbrakeInput > 0.01f)
         {
-            ApplyBrakeTorque(rearDriverW, (brake * 1.5f) * handbrakeInput);
-            ApplyBrakeTorque(rearPassengerW, (brake * 1.5f) * handbrakeInput);
+            foreach (CarWheels carAxis in Info_Axis)
+            {
+                if (carAxis.rear) { 
+                    ApplyBrakeTorque(carAxis.leftWheel, (brake * 1.5f) * handbrakeInput);
+                    ApplyBrakeTorque(carAxis.rightWheel, (brake * 1.5f) * handbrakeInput);
+                }
+            }
         }
         else {
-            ApplyBrakeTorque(frontDriverW, brake * Mathf.Clamp(brakeInput, 0, 1));
-            ApplyBrakeTorque(frontPassengerW, brake * Mathf.Clamp(brakeInput, 0, 1));
-            ApplyBrakeTorque(rearDriverW, brake * Mathf.Clamp(brakeInput, 0, 1) / 2f);
-            ApplyBrakeTorque(rearPassengerW, brake * Mathf.Clamp(brakeInput, 0, 1) / 2f);
+            float brakeAux;
+            foreach (CarWheels carAxis in Info_Axis)
+            {
+                if (carAxis.rear) brakeAux = brake * Mathf.Clamp(brakeInput, 0, 1) / 2f;
+                else brakeAux = brake * Mathf.Clamp(brakeInput, 0, 1);
+
+                ApplyBrakeTorque(carAxis.leftWheel, brakeAux);
+                ApplyBrakeTorque(carAxis.rightWheel, brakeAux);
+            }
         }
     }
 
@@ -90,10 +121,11 @@ public class CarController : MonoBehaviour
 
     private void UpdateWheelPoses()
     {
-        UpdateWheelPoses(frontDriverW, frontDriverT);
-        UpdateWheelPoses(frontPassengerW, frontPassengerT);
-        UpdateWheelPoses(rearDriverW, rearDriverT);
-        UpdateWheelPoses(rearPassengerW, rearPassengerT);
+        foreach (CarWheels carAxis in Info_Axis)
+        {
+            UpdateWheelPoses(carAxis.leftWheel, carAxis.leftWheelTransform);
+            UpdateWheelPoses(carAxis.rightWheel, carAxis.rightWheelTransform);
+        }
     }
 
     private void UpdateWheelPoses(WheelCollider _collider, Transform _transform)
@@ -103,6 +135,8 @@ public class CarController : MonoBehaviour
 
         // out -> like & in c++
         _collider.GetWorldPose(out _position, out _quat);
+
+
 
         _transform.position = _position;
         _transform.rotation = _quat;
