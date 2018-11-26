@@ -6,6 +6,8 @@ using UnityEngine;
 public class Trees : MonoBehaviour {
 
 
+    public readonly string p = "jdjd";
+
     public Vector3 lookAtPoint = Vector3.zero;
     // Use this for initialization
     void Start () {
