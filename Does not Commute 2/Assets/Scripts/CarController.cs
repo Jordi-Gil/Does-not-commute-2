@@ -5,9 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class CarWheels : System.Object
 {
-    public WheelCollider leftWheel;
+    public WheelCollider leftWheelCollider;
     public Transform leftWheelTransform;
-    public WheelCollider rightWheel;
+    public WheelCollider rightWheelCollider;
     public Transform rightWheelTransform;
     public bool motor;
     public bool steering;
@@ -38,8 +38,8 @@ public class CarController : MonoBehaviour
     {
         float massWheel = carBody.mass / 10f;
         foreach (CarWheels carAxis in Info_Axis) {
-            carAxis.leftWheel.mass = massWheel;
-            carAxis.rightWheel.mass = massWheel;
+            carAxis.leftWheelCollider.mass = massWheel;
+            carAxis.rightWheelCollider.mass = massWheel;
         }
         
     }
@@ -61,7 +61,7 @@ public class CarController : MonoBehaviour
     {
         gasInput = Input.GetAxis("Vertical");
         steerInput = Input.GetAxis("Horizontal");
-        brakeInput = Mathf.Clamp01(-Input.GetAxis("Vertical"));
+        brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
         handbrakeInput = Mathf.Abs(Input.GetAxis("Jump"));
     }
 
@@ -70,8 +70,8 @@ public class CarController : MonoBehaviour
         steeringAngle = maxSteerAngle * steerInput;
         foreach (CarWheels carAxis in Info_Axis) {
             if (carAxis.steering) {
-                carAxis.leftWheel.steerAngle = steeringAngle;
-                carAxis.rightWheel.steerAngle = steeringAngle;
+                carAxis.leftWheelCollider.steerAngle = steeringAngle;
+                carAxis.rightWheelCollider.steerAngle = steeringAngle;
             }
         }
     }
@@ -83,8 +83,8 @@ public class CarController : MonoBehaviour
         {
             if (carAxis.motor)
             {
-                carAxis.leftWheel.motorTorque = motorTorque;
-                carAxis.rightWheel.motorTorque = motorTorque;
+                carAxis.leftWheelCollider.motorTorque = motorTorque;
+                carAxis.rightWheelCollider.motorTorque = motorTorque;
             }
         }
     }
@@ -96,8 +96,8 @@ public class CarController : MonoBehaviour
             foreach (CarWheels carAxis in Info_Axis)
             {
                 if (carAxis.rear) { 
-                    ApplyBrakeTorque(carAxis.leftWheel, (brake * 1.5f) * handbrakeInput);
-                    ApplyBrakeTorque(carAxis.rightWheel, (brake * 1.5f) * handbrakeInput);
+                    ApplyBrakeTorque(carAxis.leftWheelCollider, (brake * 1.5f) * handbrakeInput);
+                    ApplyBrakeTorque(carAxis.rightWheelCollider, (brake * 1.5f) * handbrakeInput);
                 }
             }
         }
@@ -108,8 +108,8 @@ public class CarController : MonoBehaviour
                 if (carAxis.rear) brakeAux = brake * Mathf.Clamp(brakeInput, 0, 1) / 2f;
                 else brakeAux = brake * Mathf.Clamp(brakeInput, 0, 1);
 
-                ApplyBrakeTorque(carAxis.leftWheel, brakeAux);
-                ApplyBrakeTorque(carAxis.rightWheel, brakeAux);
+                ApplyBrakeTorque(carAxis.leftWheelCollider, brakeAux);
+                ApplyBrakeTorque(carAxis.rightWheelCollider, brakeAux);
             }
         }
     }
@@ -123,8 +123,8 @@ public class CarController : MonoBehaviour
     {
         foreach (CarWheels carAxis in Info_Axis)
         {
-            UpdateWheelPoses(carAxis.leftWheel, carAxis.leftWheelTransform);
-            UpdateWheelPoses(carAxis.rightWheel, carAxis.rightWheelTransform);
+            UpdateWheelPoses(carAxis.leftWheelCollider, carAxis.leftWheelTransform);
+            UpdateWheelPoses(carAxis.rightWheelCollider, carAxis.rightWheelTransform);
         }
     }
 
@@ -135,8 +135,6 @@ public class CarController : MonoBehaviour
 
         // out -> like & in c++
         _collider.GetWorldPose(out _position, out _quat);
-
-
 
         _transform.position = _position;
         _transform.rotation = _quat;

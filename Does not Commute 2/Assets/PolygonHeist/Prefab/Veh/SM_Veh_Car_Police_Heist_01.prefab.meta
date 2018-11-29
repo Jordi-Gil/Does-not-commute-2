@@ -1,10 +1,8 @@
 fileFormatVersion: 2
 guid: f5ebeaeea8049c844bec8382b58f6c97
-labels:
-- Vehicle
+timeCreated: 1502683363
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
