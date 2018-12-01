@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 476562}
   - component: {fileID: 3348956}
   - component: {fileID: 2319048}
+  - component: {fileID: 136697402067239172}
   m_Layer: 0
   m_Name: SM_Env_TreeBirch_02
   m_TagString: Untagged
@@ -83,3 +84,16 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 152532}
   m_IsPrefabAsset: 1
+--- !u!136 &136697402067239172
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2955971
+  m_Height: 6.576266
+  m_Direction: 1
+  m_Center: {x: -0.03560638, y: 3.288133, z: 0.2171707}

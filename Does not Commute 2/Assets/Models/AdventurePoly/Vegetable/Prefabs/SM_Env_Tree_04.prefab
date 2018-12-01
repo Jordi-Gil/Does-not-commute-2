@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 440276}
   - component: {fileID: 3395076}
   - component: {fileID: 2307200}
+  - component: {fileID: 136163223036523210}
   m_Layer: 0
   m_Name: SM_Env_Tree_04
   m_TagString: Untagged
@@ -83,3 +84,16 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 177546}
   m_IsPrefabAsset: 1
+--- !u!136 &136163223036523210
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3608506
+  m_Height: 5.5757275
+  m_Direction: 1
+  m_Center: {x: 0.2611518, y: 2.7878637, z: 0.2252014}

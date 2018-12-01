@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 493054}
   - component: {fileID: 3307996}
   - component: {fileID: 2360714}
+  - component: {fileID: 136704144829602592}
   m_Layer: 0
   m_Name: SM_Env_TreePine_04
   m_TagString: Untagged
@@ -83,3 +84,16 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103806}
   m_IsPrefabAsset: 1
+--- !u!136 &136704144829602592
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2115631
+  m_Height: 4.933483
+  m_Direction: 1
+  m_Center: {x: -0.1398697, y: 2.4667416, z: 0.1132202}
