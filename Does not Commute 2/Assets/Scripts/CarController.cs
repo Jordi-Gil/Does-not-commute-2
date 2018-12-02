@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class CarWheels : System.Object
+public class CarAxis : System.Object
 {
     public WheelCollider leftWheelCollider;
     public Transform leftWheelTransform;
@@ -17,43 +17,51 @@ public class CarWheels : System.Object
 public class CarController : MonoBehaviour
 {
 
+    #region Variables
+
+    [SerializeField]
+    private Transform carTransform;
+    [SerializeField]
+    private Rigidbody carBody;
+    [SerializeField]
+    private float maxSteerAngle = 30;
+    [SerializeField]
+    private float motorForce = 100;
+    [SerializeField]
+    private float brake = 2500f;
+    [SerializeField]
+    private float antiRollForce = 100;
+    [SerializeField]
+    private List<CarAxis> Info_Axis;
+
+
     private float gasInput;
     private float brakeInput;
     private float handbrakeInput;
     private float steerInput;
     private float steeringAngle;
     private float motorTorque;
-    
 
-    public Rigidbody carBody;
-
-    public float maxSteerAngle = 30;
-    public float motorForce = 400;
-    public float brakeForce = 2500f;
-    public float brake = 2500f;
-
-    public List<CarWheels> Info_Axis;
+    #endregion
 
     private void Start()
     {
+        /*
         float massWheel = carBody.mass / 10f;
         foreach (CarWheels carAxis in Info_Axis) {
             carAxis.leftWheelCollider.mass = massWheel;
             carAxis.rightWheelCollider.mass = massWheel;
-        }
+        }*/
         
     }
 
-    // This function is called every fixed framerate frame.
-    // FixedUpdate should be used instead of Update when dealing with Rigidbody.
-    // For example when adding a force to a rigidbody, you have to apply the force every fixed frame inside FixedUpdate 
-    // instead of every frame inside Update.
     void FixedUpdate()
     {
         GetInput();
         Steer();
         Accelerate();
         Braking();
+        AntiSwayController();
         UpdateWheelPoses();
     }
 
@@ -62,13 +70,13 @@ public class CarController : MonoBehaviour
         gasInput = Input.GetAxis("Vertical");
         steerInput = Input.GetAxis("Horizontal");
         brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
-        handbrakeInput = Mathf.Abs(Input.GetAxis("Jump"));
+        handbrakeInput = Mathf.Abs(Input.GetAxis("Jump")); //Space bar
     }
 
     private void Steer()
     {
         steeringAngle = maxSteerAngle * steerInput;
-        foreach (CarWheels carAxis in Info_Axis) {
+        foreach (CarAxis carAxis in Info_Axis) {
             if (carAxis.steering) {
                 carAxis.leftWheelCollider.steerAngle = steeringAngle;
                 carAxis.rightWheelCollider.steerAngle = steeringAngle;
@@ -79,7 +87,7 @@ public class CarController : MonoBehaviour
     private void Accelerate()
     {
         motorTorque = motorForce * gasInput;
-        foreach (CarWheels carAxis in Info_Axis)
+        foreach (CarAxis carAxis in Info_Axis)
         {
             if (carAxis.motor)
             {
@@ -93,7 +101,7 @@ public class CarController : MonoBehaviour
     {
         if (handbrakeInput > 0.01f)
         {
-            foreach (CarWheels carAxis in Info_Axis)
+            foreach (CarAxis carAxis in Info_Axis)
             {
                 if (carAxis.rear) { 
                     ApplyBrakeTorque(carAxis.leftWheelCollider, (brake * 1.5f) * handbrakeInput);
@@ -103,7 +111,7 @@ public class CarController : MonoBehaviour
         }
         else {
             float brakeAux;
-            foreach (CarWheels carAxis in Info_Axis)
+            foreach (CarAxis carAxis in Info_Axis)
             {
                 if (carAxis.rear) brakeAux = brake * Mathf.Clamp(brakeInput, 0, 1) / 2f;
                 else brakeAux = brake * Mathf.Clamp(brakeInput, 0, 1);
@@ -121,7 +129,7 @@ public class CarController : MonoBehaviour
 
     private void UpdateWheelPoses()
     {
-        foreach (CarWheels carAxis in Info_Axis)
+        foreach (CarAxis carAxis in Info_Axis)
         {
             UpdateWheelPoses(carAxis.leftWheelCollider, carAxis.leftWheelTransform);
             UpdateWheelPoses(carAxis.rightWheelCollider, carAxis.rightWheelTransform);
@@ -138,5 +146,21 @@ public class CarController : MonoBehaviour
 
         _transform.position = _position;
         _transform.rotation = _quat;
+    }
+
+    private void AntiSwayController()
+    {
+        foreach (CarAxis carAxis in Info_Axis)
+        {
+            WheelHit leftHit, rightHit;
+            if (!carAxis.leftWheelCollider.GetGroundHit(out leftHit)) {
+                carBody.AddForceAtPosition(-carTransform.up * antiRollForce,carAxis.leftWheelTransform.position);
+            }
+
+            if (!carAxis.rightWheelCollider.GetGroundHit(out rightHit))
+            {
+                carBody.AddForceAtPosition(-carTransform.up * antiRollForce, carAxis.rightWheelTransform.position);
+            }
+        }
     }
 }
