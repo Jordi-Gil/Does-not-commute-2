@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public struct CarsInfo
-{
-    public GameObject car;
-    public CarController scriptController;
-    public int index;
-}
 
+[System.Serializable]
+public struct TransformPair
+{
+    [SerializeField]
+    private Transform first;
+    [SerializeField]
+    private Transform second;
+
+    public Transform p_first { set { first = value; } get { return first; } }
+    public Transform p_second { set { second = value; } get { return second; } }
+}
 public class LevelManager : MonoBehaviour
 {
     #region Variables
@@ -18,7 +22,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private TopDownCamera scriptCamera;
     [SerializeField]
-    private List<CarsInfo> cars;
+    private List<GameObject> cars;
+    [SerializeField]
+    private List<TransformPair> paths;
+    private int numRounds;
+    [SerializeField]
+    private GameObject activeCar;
     #endregion
 
 
@@ -26,20 +35,15 @@ public class LevelManager : MonoBehaviour
     // Use this for initialization
     private void Start ()
     {
-        GameObject clone;
-        clone = Instantiate(cars[round].car, new Vector3(50,0,10), Quaternion.identity);
-        
+        numRounds = cars.Count;
+        activeCar = Instantiate(cars[round], paths[round].p_first.position, Quaternion.identity);
+        cars[round] = activeCar;
+        scriptCamera.ChangeTarget(activeCar);
 	}
 
     private void OnApplicationQuit()
     {
-        foreach (CarsInfo carInf in cars)
-        {
-            carInf.car.tag = "Car";
-            carInf.scriptController.enabled = true;
-        }
-
-        cars[0].car.tag = "ActiveCar";
+        
     }
 
     #endregion
@@ -47,17 +51,12 @@ public class LevelManager : MonoBehaviour
     #region Public Methods
     public void NextRound()
     {
+        cars[round].GetComponent<CarController>().enabled = false; //Destruirlo y guardar info
         round += 1;
-        Instantiate(cars[round].car, new Vector3(50, 0, 10), Quaternion.identity);
-        for (int i = round - 1; i >= 0; --i) {
-            Debug.Log(cars[i].car.name + " desactivated");
-            cars[i].car.tag = "Car";
-            //cars[i].scriptController.enabled = false;
-        }
-        cars[round].car.tag = "ActiveCar";
-        scriptCamera.ChangeTarget();
+        if (round >= numRounds) return;
+        activeCar = Instantiate(cars[round], new Vector3(50, 0, 10), Quaternion.identity);
+        cars[round] = activeCar;
+        scriptCamera.ChangeTarget(activeCar);
     }
     #endregion
-
-
 }

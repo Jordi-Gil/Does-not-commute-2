@@ -22,7 +22,6 @@ public class TopDownCamera : MonoBehaviour {
 
     private Transform cameraTransform;
     private Vector3 refVelocity;
-    private bool find;
     #endregion
 
 
@@ -36,22 +35,10 @@ public class TopDownCamera : MonoBehaviour {
 
     private void Update ()
     {
-        if (!find) FindCar();
         HandleCamera();
     }
 
     #region Helper Methods
-    private void FindCar()
-    {
-        Debug.Log("Finding Car");
-        targetTransform = GameObject.FindGameObjectWithTag("ActiveCar").transform;
-        if (targetTransform != null)
-        {
-            find = true;
-            Debug.Log("Car find");
-        }
-    }
-
     private void HandleCamera()
     {
         if (!targetTransform) return;
@@ -73,11 +60,9 @@ public class TopDownCamera : MonoBehaviour {
 
     #region Public Methods
 
-    public void ChangeTarget()
+    public void ChangeTarget(GameObject _target)
     {
-        Debug.Log("Disabled actual car");
-        find = false;
-        targetTransform = null;
+        targetTransform = _target.transform;
     }
 
     #endregion

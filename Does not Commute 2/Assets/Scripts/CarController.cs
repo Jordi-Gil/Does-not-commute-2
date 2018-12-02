@@ -18,7 +18,6 @@ public class CarController : MonoBehaviour
 {
 
     #region Variables
-
     [SerializeField]
     private Transform carTransform;
     [SerializeField]
@@ -41,18 +40,13 @@ public class CarController : MonoBehaviour
     private float steerInput;
     private float steeringAngle;
     private float motorTorque;
-
+    private LevelManager levelManager;
     #endregion
 
+    #region Unity Methods
     private void Start()
     {
-        /*
-        float massWheel = carBody.mass / 10f;
-        foreach (CarWheels carAxis in Info_Axis) {
-            carAxis.leftWheelCollider.mass = massWheel;
-            carAxis.rightWheelCollider.mass = massWheel;
-        }*/
-        
+        levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
     }
 
     void FixedUpdate()
@@ -65,6 +59,16 @@ public class CarController : MonoBehaviour
         UpdateWheelPoses();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag(gameObject.tag))
+        {
+            levelManager.NextRound();
+        }
+    }
+    #endregion
+
+    #region Helper Methods
     private void GetInput()
     {
         gasInput = Input.GetAxis("Vertical");
@@ -96,7 +100,6 @@ public class CarController : MonoBehaviour
             }
         }
     }
-
     private void Braking()
     {
         if (handbrakeInput > 0.01f)
@@ -121,12 +124,10 @@ public class CarController : MonoBehaviour
             }
         }
     }
-
     private void ApplyBrakeTorque(WheelCollider _collider, float _brake)
     {
         _collider.brakeTorque = _brake;
     }
-
     private void UpdateWheelPoses()
     {
         foreach (CarAxis carAxis in Info_Axis)
@@ -135,7 +136,6 @@ public class CarController : MonoBehaviour
             UpdateWheelPoses(carAxis.rightWheelCollider, carAxis.rightWheelTransform);
         }
     }
-
     private void UpdateWheelPoses(WheelCollider _collider, Transform _transform)
     {
         Vector3 _position = _transform.position;
@@ -147,7 +147,6 @@ public class CarController : MonoBehaviour
         _transform.position = _position;
         _transform.rotation = _quat;
     }
-
     private void AntiSwayController()
     {
         foreach (CarAxis carAxis in Info_Axis)
@@ -163,4 +162,5 @@ public class CarController : MonoBehaviour
             }
         }
     }
+    #endregion
 }

@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Manager
-  - ActiveCar
-  - Car
+  - CheckPoint0
+  - CheckPoint1
+  - CheckPoint2
   layers:
   - Default
   - TransparentFX

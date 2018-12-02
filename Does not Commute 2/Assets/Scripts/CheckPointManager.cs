@@ -3,24 +3,17 @@ using System.Collections;
 
 public class CheckPointManager : MonoBehaviour
 {
-    
+    #region Variables
     [SerializeField]
     private Color color;
-    private LevelManager levelManager;
+    #endregion
 
     #region Main Method
-
     private void Start()
     {
-        levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
+        
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.name + " win");
-        levelManager.NextRound();
-    }
-
+    
     private void OnDrawGizmos()
     {
         // Draw a semitransparent blue cube at the transforms position
