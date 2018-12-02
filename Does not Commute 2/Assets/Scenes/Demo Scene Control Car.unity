@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3823069639a94e48b9a5d0e05887717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carTransform: {fileID: 0}
+  targetTransform: {fileID: 0}
   distance: 10
   height: 20
   angle: 45
@@ -284,8 +284,8 @@ GameObject:
   - component: {fileID: 904116297}
   - component: {fileID: 904116298}
   m_Layer: 0
-  m_Name: SceneController
-  m_TagString: Untagged
+  m_Name: SceneManager
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,12 +318,13 @@ MonoBehaviour:
   scriptCamera: {fileID: 109921488}
   cars:
   - car: {fileID: 1046365189431062, guid: 4692b7542bfc916478167b8bb6d7d24d, type: 2}
+    scriptController: {fileID: 114756562787149078, guid: 4692b7542bfc916478167b8bb6d7d24d,
+      type: 2}
     index: 0
   - car: {fileID: 1260360026324884, guid: b1bb584b63e34734cb184e090c4e010e, type: 2}
+    scriptController: {fileID: 114399108968883284, guid: b1bb584b63e34734cb184e090c4e010e,
+      type: 2}
     index: 1
-  checkPoints:
-  - {fileID: 1442952294}
-  - {fileID: 1374253337}
 --- !u!1 &1374253335
 GameObject:
   m_ObjectHideFlags: 0
