@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct CarAxis //: System.Object
+public struct CarAxis
 {
     public WheelCollider leftWheelCollider;
     public Transform leftWheelTransform;
@@ -12,23 +12,6 @@ public struct CarAxis //: System.Object
     public bool motor;
     public bool steering;
     public bool rear;
-}
-
-
-public struct UserInput
-{
-    public float gasInput;
-    public float brakeInput;
-    public float handbrakeInput;
-    public float steerInput;
-
-    public UserInput(float _gasInput, float _brakeInput, float _handbrakeInput, float _steerInput)
-    {
-        gasInput = _gasInput;
-        brakeInput = _brakeInput;
-        handbrakeInput = _handbrakeInput;
-        steerInput = _steerInput;
-    }
 }
 
 public class CarController : MonoBehaviour
@@ -48,7 +31,7 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private float antiRollForce = 100;
     [SerializeField]
-    private bool isUser = true;
+    private bool controlUser = true;
     [SerializeField]
     private List<CarAxis> Info_Axis;
 
@@ -59,67 +42,57 @@ public class CarController : MonoBehaviour
     private float steeringAngle;
     private float motorTorque;
     private LevelManager levelManager;
-    private int index;
-    private static List<UserInput> path = new List<UserInput>();
+
+    private List<PointInTime> path;
     #endregion
 
     #region Unity Methods
     private void Start()
     {
         levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
-        isUser = true;
+        path = new List<PointInTime>();
     }
 
     void FixedUpdate()
     {
-        GetInput();
-        Steer();
-        Accelerate();
-        Braking();
-        AntiSwayController();
-        UpdateWheelPoses();
-        if (!isUser) index += 1;
+        if (controlUser)
+        {
+            GetInput();
+            Steer();
+            Accelerate();
+            Braking();
+            AntiSwayController();
+            UpdateWheelPoses();
+            Record();
+        }
+        else {
+            Play();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(gameObject.tag))
         {
-
-            foreach (CarAxis carAxis in Info_Axis)
+            if (controlUser)
             {
-                carAxis.leftWheelCollider.motorTorque = 0;
-                carAxis.rightWheelCollider.motorTorque = 0;
+                levelManager.NextRound(path);
+                
             }
-            if(isUser) levelManager.NextRound();
-
+            
         }
     }
     #endregion
 
     #region Privaye Methods
     private void GetInput()
-    {
-        if (isUser)
-        {
-            
-            gasInput = Input.GetAxis("Vertical");
-            steerInput = Input.GetAxis("Horizontal");
-            brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
-            handbrakeInput = Mathf.Abs(Input.GetAxis("Jump")); //Space bar
-
-            path.Add(new UserInput(gasInput,brake,handbrakeInput,steerInput));
-
-        }
-        else {
-
-            gasInput = path[index].gasInput;
-            steerInput = path[index].steerInput;
-            brakeInput = path[index].brakeInput;
-            handbrakeInput = path[index].handbrakeInput;
-
-        }
+    {  
+        gasInput = Input.GetAxis("Vertical");
+        steerInput = Input.GetAxis("Horizontal");
+        brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
+        handbrakeInput = Mathf.Abs(Input.GetAxis("Jump")); //Space bar
     }
+
     private void Steer()
     {
         steeringAngle = maxSteerAngle * steerInput;
@@ -130,6 +103,7 @@ public class CarController : MonoBehaviour
             }
         }
     }
+
     private void Accelerate()
     {
         motorTorque = motorForce * gasInput;
@@ -142,6 +116,7 @@ public class CarController : MonoBehaviour
             }
         }
     }
+
     private void Braking()
     {
         if (handbrakeInput > 0.01f)
@@ -166,10 +141,12 @@ public class CarController : MonoBehaviour
             }
         }
     }
+
     private void ApplyBrakeTorque(WheelCollider _collider, float _brake)
     {
         _collider.brakeTorque = _brake;
     }
+
     private void UpdateWheelPoses()
     {
         foreach (CarAxis carAxis in Info_Axis)
@@ -178,6 +155,7 @@ public class CarController : MonoBehaviour
             UpdateWheelPoses(carAxis.rightWheelCollider, carAxis.rightWheelTransform);
         }
     }
+
     private void UpdateWheelPoses(WheelCollider _collider, Transform _transform)
     {
         Vector3 _position = _transform.position;
@@ -189,6 +167,7 @@ public class CarController : MonoBehaviour
         _transform.position = _position;
         _transform.rotation = _quat;
     }
+
     private void AntiSwayController()
     {
         foreach (CarAxis carAxis in Info_Axis)
@@ -204,22 +183,33 @@ public class CarController : MonoBehaviour
             }
         }
     }
+
+    private void Record()
+    {
+        path.Add(new PointInTime(transform.position, transform.rotation));
+    }
+
+    private void Play()
+    {
+        if(path.Count > 0)
+        {
+            PointInTime point = path[0];
+            transform.position = point.getPosition();
+            transform.rotation = point.getRotation();
+            path.RemoveAt(0);
+        }
+    }
     #endregion
 
     #region Public Methods
-    public void restartPos(Vector3 pos_ini, Quaternion rot_ini)
+    public void PlayIA()
     {
+        controlUser = false;
+    }
 
-        carTransform.position = pos_ini;
-        carTransform.rotation = rot_ini;
-
-        foreach(CarAxis carAxis in Info_Axis)
-        {
-            carAxis.leftWheelCollider.brakeTorque = Mathf.Infinity;
-            carAxis.rightWheelCollider.brakeTorque = Mathf.Infinity;
-        }
-
-        isUser = false;
+    public void setPath(List<PointInTime> _path)
+    {
+        path = _path;
     }
     #endregion
 }

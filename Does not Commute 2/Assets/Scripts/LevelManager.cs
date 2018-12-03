@@ -14,6 +14,7 @@ public struct TransformPair
     public Transform p_first { set { first = value; } get { return first; } }
     public Transform p_second { set { second = value; } get { return second; } }
 }
+
 public class LevelManager : MonoBehaviour
 {
     #region Variables
@@ -22,10 +23,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private TopDownCamera scriptCamera;
     [SerializeField]
-    private List<GameObject> cars;
+    private List<GameObject> carsPrefabs;
     [SerializeField]
     private List<TransformPair> paths;
-    private int numRounds;
+    [SerializeField]
+    private List<PathCompleted> pathCompleted;
     [SerializeField]
     private GameObject activeCar;
     #endregion
@@ -35,31 +37,55 @@ public class LevelManager : MonoBehaviour
     // Use this for initialization
     private void Start ()
     {
-        numRounds = cars.Count;
-        activeCar = Instantiate(cars[round], paths[round].p_first.position, Quaternion.identity);
-        cars[round] = activeCar;
-        
+        pathCompleted = new List<PathCompleted>();
+        activeCar = Instantiate(carsPrefabs[round], paths[round].p_first.position, Quaternion.identity);
+        //carsPrefabs[round] = activeCar;
         scriptCamera.ChangeTarget(activeCar);
 	}
-
-    private void OnApplicationQuit()
-    {
-        
-    }
-
     #endregion
 
     #region Public Methods
-    public void NextRound()
+    public void NextRound(List<PointInTime> pathCar)
     {
-        cars[round].GetComponent<CarController>().restartPos(paths[round].p_first.position, paths[round].p_first.rotation); //Destruirlo y guardar info
-        
+        TransformPair path = paths[round];
+        pathCompleted.Add(new PathCompleted(activeCar, path.p_first.position, path.p_first.rotation, path.p_second.position, pathCar));
         round += 1;
-        if (round >= numRounds) return;
-        activeCar = Instantiate(cars[round], paths[round].p_first.position, Quaternion.identity);
-        cars[round] = activeCar;
-        
-        scriptCamera.ChangeTarget(activeCar);
+        if (round >= carsPrefabs.Count)
+        {
+            Finish();
+        }
+        else
+        {
+            activeCar = Instantiate(carsPrefabs[round], paths[round].p_first.position, Quaternion.identity);
+            carsPrefabs[round] = activeCar;
+            scriptCamera.ChangeTarget(activeCar);
+
+            InstantiateIA();
+        }
+    }
+    #endregion
+
+    #region Public Methods
+    private void InstantiateIA()
+    {
+        foreach (PathCompleted pathComp in pathCompleted)
+        {
+            GameObject car = pathComp.getCar();
+            car.transform.position = pathComp.getStartPosition();
+            car.transform.rotation = pathComp.getStartRotation();
+            List<PointInTime> path;
+            pathComp.getPath(out path);
+            car.GetComponent<CarController>().setPath(path);
+            car.GetComponent<CarController>().PlayIA();
+        }
+    }
+
+    private void Finish()
+    {
+        foreach (PathCompleted pathComp in pathCompleted)
+        {
+            Destroy(pathComp.getCar());
+        }
     }
     #endregion
 }

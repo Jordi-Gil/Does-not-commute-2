@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   round: 0
   scriptCamera: {fileID: 109921488}
-  cars:
+  carsPrefabs:
   - {fileID: 1046365189431062, guid: 4692b7542bfc916478167b8bb6d7d24d, type: 2}
   - {fileID: 1260360026324884, guid: b1bb584b63e34734cb184e090c4e010e, type: 2}
   paths:
@@ -324,6 +324,7 @@ MonoBehaviour:
     second: {fileID: 1442952295}
   - first: {fileID: 921260923}
     second: {fileID: 1374253338}
+  pathCompleted: []
   activeCar: {fileID: 0}
 --- !u!1 &921260920
 GameObject:
@@ -535,7 +536,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1607685502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89, y: 0.5, z: 29.1}
+  m_LocalPosition: {x: 90, y: 0.5, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -8,11 +8,7 @@ public class CheckPointManager : MonoBehaviour
     private Color color;
     #endregion
 
-    #region Main Method
-    private void Start()
-    {
-        
-    }
+    #region Main Methods
     
     private void OnDrawGizmos()
     {
