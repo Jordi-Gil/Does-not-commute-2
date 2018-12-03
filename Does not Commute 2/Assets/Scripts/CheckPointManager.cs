@@ -22,7 +22,6 @@ public class CheckPointManager : MonoBehaviour
     }
     #endregion
 
-
     #region Helper Method
     #endregion
 }

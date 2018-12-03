@@ -38,6 +38,7 @@ public class LevelManager : MonoBehaviour
         numRounds = cars.Count;
         activeCar = Instantiate(cars[round], paths[round].p_first.position, Quaternion.identity);
         cars[round] = activeCar;
+        
         scriptCamera.ChangeTarget(activeCar);
 	}
 
@@ -51,11 +52,13 @@ public class LevelManager : MonoBehaviour
     #region Public Methods
     public void NextRound()
     {
-        cars[round].GetComponent<CarController>().enabled = false; //Destruirlo y guardar info
+        cars[round].GetComponent<CarController>().restartPos(paths[round].p_first.position, paths[round].p_first.rotation); //Destruirlo y guardar info
+        
         round += 1;
         if (round >= numRounds) return;
-        activeCar = Instantiate(cars[round], new Vector3(50, 0, 10), Quaternion.identity);
+        activeCar = Instantiate(cars[round], paths[round].p_first.position, Quaternion.identity);
         cars[round] = activeCar;
+        
         scriptCamera.ChangeTarget(activeCar);
     }
     #endregion

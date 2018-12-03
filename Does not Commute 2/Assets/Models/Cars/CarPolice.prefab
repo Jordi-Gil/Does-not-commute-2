@@ -850,6 +850,7 @@ MonoBehaviour:
   motorForce: 400
   brake: 2500
   antiRollForce: 5000
+  isUser: 0
   Info_Axis:
   - leftWheelCollider: {fileID: 146588639898553300}
     leftWheelTransform: {fileID: 4326036977567674}

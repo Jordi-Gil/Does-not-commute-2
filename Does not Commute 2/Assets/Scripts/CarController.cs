@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class CarAxis : System.Object
+public struct CarAxis //: System.Object
 {
     public WheelCollider leftWheelCollider;
     public Transform leftWheelTransform;
@@ -12,6 +12,23 @@ public class CarAxis : System.Object
     public bool motor;
     public bool steering;
     public bool rear;
+}
+
+
+public struct UserInput
+{
+    public float gasInput;
+    public float brakeInput;
+    public float handbrakeInput;
+    public float steerInput;
+
+    public UserInput(float _gasInput, float _brakeInput, float _handbrakeInput, float _steerInput)
+    {
+        gasInput = _gasInput;
+        brakeInput = _brakeInput;
+        handbrakeInput = _handbrakeInput;
+        steerInput = _steerInput;
+    }
 }
 
 public class CarController : MonoBehaviour
@@ -31,8 +48,9 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private float antiRollForce = 100;
     [SerializeField]
+    private bool isUser = true;
+    [SerializeField]
     private List<CarAxis> Info_Axis;
-
 
     private float gasInput;
     private float brakeInput;
@@ -41,12 +59,15 @@ public class CarController : MonoBehaviour
     private float steeringAngle;
     private float motorTorque;
     private LevelManager levelManager;
+    private int index;
+    private static List<UserInput> path = new List<UserInput>();
     #endregion
 
     #region Unity Methods
     private void Start()
     {
         levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
+        isUser = true;
     }
 
     void FixedUpdate()
@@ -57,26 +78,48 @@ public class CarController : MonoBehaviour
         Braking();
         AntiSwayController();
         UpdateWheelPoses();
+        if (!isUser) index += 1;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(gameObject.tag))
         {
-            levelManager.NextRound();
+
+            foreach (CarAxis carAxis in Info_Axis)
+            {
+                carAxis.leftWheelCollider.motorTorque = 0;
+                carAxis.rightWheelCollider.motorTorque = 0;
+            }
+            if(isUser) levelManager.NextRound();
+
         }
     }
     #endregion
 
-    #region Helper Methods
+    #region Privaye Methods
     private void GetInput()
     {
-        gasInput = Input.GetAxis("Vertical");
-        steerInput = Input.GetAxis("Horizontal");
-        brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
-        handbrakeInput = Mathf.Abs(Input.GetAxis("Jump")); //Space bar
-    }
+        if (isUser)
+        {
+            
+            gasInput = Input.GetAxis("Vertical");
+            steerInput = Input.GetAxis("Horizontal");
+            brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
+            handbrakeInput = Mathf.Abs(Input.GetAxis("Jump")); //Space bar
 
+            path.Add(new UserInput(gasInput,brake,handbrakeInput,steerInput));
+
+        }
+        else {
+
+            gasInput = path[index].gasInput;
+            steerInput = path[index].steerInput;
+            brakeInput = path[index].brakeInput;
+            handbrakeInput = path[index].handbrakeInput;
+
+        }
+    }
     private void Steer()
     {
         steeringAngle = maxSteerAngle * steerInput;
@@ -87,7 +130,6 @@ public class CarController : MonoBehaviour
             }
         }
     }
-
     private void Accelerate()
     {
         motorTorque = motorForce * gasInput;
@@ -161,6 +203,23 @@ public class CarController : MonoBehaviour
                 carBody.AddForceAtPosition(-carTransform.up * antiRollForce, carAxis.rightWheelTransform.position);
             }
         }
+    }
+    #endregion
+
+    #region Public Methods
+    public void restartPos(Vector3 pos_ini, Quaternion rot_ini)
+    {
+
+        carTransform.position = pos_ini;
+        carTransform.rotation = rot_ini;
+
+        foreach(CarAxis carAxis in Info_Axis)
+        {
+            carAxis.leftWheelCollider.brakeTorque = Mathf.Infinity;
+            carAxis.rightWheelCollider.brakeTorque = Mathf.Infinity;
+        }
+
+        isUser = false;
     }
     #endregion
 }
