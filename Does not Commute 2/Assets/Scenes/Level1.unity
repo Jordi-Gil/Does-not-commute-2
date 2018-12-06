@@ -987,7 +987,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 114
+  m_RootOrder: 117
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &173510172
 Prefab:
@@ -3055,7 +3055,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 111
+  m_RootOrder: 113
   m_LocalEulerAnglesHint: {x: 74.5, y: 0, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
@@ -6831,7 +6831,7 @@ Terrain:
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 3cedee2267f0e9a42b1d611284a53ccc, type: 2}
   m_TreeDistance: 2000
-  m_TreeBillboardDistance: 50
+  m_TreeBillboardDistance: 2000
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
@@ -9409,7 +9409,7 @@ Transform:
   - {fileID: 321122177}
   - {fileID: 1323625223}
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1457346770
 MonoBehaviour:
@@ -9428,6 +9428,7 @@ MonoBehaviour:
   motorForce: 400
   brake: 2500
   antiRollForce: 100
+  controlUser: 1
   Info_Axis:
   - leftWheelCollider: {fileID: 500833086}
     leftWheelTransform: {fileID: 1824973501}
@@ -12019,7 +12020,7 @@ Transform:
   m_Children:
   - {fileID: 196096277}
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2030093381 stripped
 GameObject:
