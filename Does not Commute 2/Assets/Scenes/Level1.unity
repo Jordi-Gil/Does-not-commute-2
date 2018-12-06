@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a0e1b3615966a741bdb69f8b144b9a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   color: {r: 0.8584906, g: 0.2956123, b: 0.2956123, a: 0.49019608}
 --- !u!4 &17736363
 Transform:
@@ -2756,8 +2756,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3823069639a94e48b9a5d0e05887717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   targetTransform: {fileID: 0}
   distance: 10
   height: 20
@@ -4071,8 +4071,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a15ed6f450191342a23b8a28b04a93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   color: {r: 0.37254903, g: 0.78431374, b: 0.27058825, a: 0.49019608}
 --- !u!4 &695784218
 Transform:
@@ -6293,7 +6293,7 @@ Terrain:
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 3cedee2267f0e9a42b1d611284a53ccc, type: 2}
   m_TreeDistance: 2000
-  m_TreeBillboardDistance: 50
+  m_TreeBillboardDistance: 2000
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
@@ -9122,8 +9122,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 600915342b57967469d2c63f2885854b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   round: 0
   scriptCamera: {fileID: 534669906}
   carsPrefabs:
@@ -11340,8 +11340,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a0e1b3615966a741bdb69f8b144b9a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   color: {r: 0.37277177, g: 0.7830189, b: 0.2696244, a: 0.49019608}
 --- !u!4 &2015417184
 Transform:
@@ -12272,8 +12272,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a15ed6f450191342a23b8a28b04a93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   color: {r: 0.85882354, g: 0.29411766, b: 0.29411766, a: 0.49019608}
 --- !u!4 &2145195028
 Transform:
