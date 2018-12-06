@@ -1,3 +1,0 @@
-Bakery -> 3.155562
-Stadium -> 5.786182
-auto service -> 3.368496

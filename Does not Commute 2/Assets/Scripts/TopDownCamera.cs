@@ -17,9 +17,7 @@ public class TopDownCamera : MonoBehaviour {
     private float angle = 45f;
     [SerializeField]
     private float smoothVelocity = 0.5f;
-    [SerializeField]
-    private Vector3 carPosition;
-
+    
     private Transform cameraTransform;
     private Vector3 refVelocity;
     #endregion
@@ -43,14 +41,14 @@ public class TopDownCamera : MonoBehaviour {
     {
         if (!targetTransform) return;
         Vector3 worldPosition = (Vector3.forward * -distance) + (Vector3.up * height);
-
+   
         Debug.DrawLine(targetTransform.position, worldPosition, Color.red);
-        Vector3 rotatedVector = Quaternion.AngleAxis(angle, Vector3.up) * worldPosition;
-        Debug.DrawLine(targetTransform.position, rotatedVector, Color.green);
+        //Vector3 rotatedVector = Quaternion.AngleAxis(angle, Vector3.up) * worldPosition;
+        //Debug.DrawLine(targetTransform.position, rotatedVector, Color.green);
 
         Vector3 flatCarPosition = targetTransform.position;
-        flatCarPosition.y = 0f;
-        Vector3 finalPosition = flatCarPosition + rotatedVector;
+        flatCarPosition.y = 40f;
+        Vector3 finalPosition = flatCarPosition /*+ rotatedVector*/;
         Debug.DrawLine(targetTransform.position, finalPosition, Color.blue);
 
         cameraTransform.position = Vector3.SmoothDamp(cameraTransform.position,finalPosition,ref refVelocity ,smoothVelocity);

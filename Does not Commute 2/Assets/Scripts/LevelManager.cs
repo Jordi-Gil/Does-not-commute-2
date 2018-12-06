@@ -39,6 +39,7 @@ public class LevelManager : MonoBehaviour
     {
         pathCompleted = new List<PathCompleted>();
         activeCar = Instantiate(carsPrefabs[round], paths[round].p_first.position, Quaternion.identity);
+        Debug.Log("Instanciado el coche "+activeCar.name);
         //carsPrefabs[round] = activeCar;
         scriptCamera.ChangeTarget(activeCar);
 	}
@@ -47,6 +48,7 @@ public class LevelManager : MonoBehaviour
     #region Public Methods
     public void NextRound(List<PointInTime> pathCar)
     {
+        Debug.Log("Next Round!");
         TransformPair path = paths[round];
         pathCompleted.Add(new PathCompleted(activeCar, path.p_first.position, path.p_first.rotation, path.p_second.position, pathCar));
         round += 1;

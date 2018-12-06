@@ -11,6 +11,6 @@ public class RespawnManager : MonoBehaviour {
     {
         // Draw a semitransparent blue cube at the transforms position
         Gizmos.color = color;
-        Gizmos.DrawCube(transform.position, new Vector3(4, 2, 1));
+        Gizmos.DrawCube(transform.position, new Vector3(4, 2, 4));
     }
 }

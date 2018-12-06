@@ -8,6 +8,7 @@ TagManager:
   - CheckPoint0
   - CheckPoint1
   - CheckPoint2
+  - CenterOfMass
   layers:
   - Default
   - TransparentFX

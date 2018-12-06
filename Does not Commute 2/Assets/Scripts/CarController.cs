@@ -29,11 +29,13 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private float brake = 2500f;
     [SerializeField]
-    private float antiRollForce = 100;
+    private float rotationSpeed;
     [SerializeField]
     private bool controlUser = true;
     [SerializeField]
     private List<CarAxis> Info_Axis;
+    [SerializeField]
+    private Vector3 CenterOfMass;
 
     private float gasInput;
     private float brakeInput;
@@ -51,6 +53,8 @@ public class CarController : MonoBehaviour
     {
         levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
         path = new List<PointInTime>();
+        
+        carBody.centerOfMass = CenterOfMass;
     }
 
     void FixedUpdate()
@@ -61,7 +65,6 @@ public class CarController : MonoBehaviour
             Steer();
             Accelerate();
             Braking();
-            AntiSwayController();
             UpdateWheelPoses();
             Record();
         }
@@ -166,22 +169,6 @@ public class CarController : MonoBehaviour
 
         _transform.position = _position;
         _transform.rotation = _quat;
-    }
-
-    private void AntiSwayController()
-    {
-        foreach (CarAxis carAxis in Info_Axis)
-        {
-            WheelHit leftHit, rightHit;
-            if (!carAxis.leftWheelCollider.GetGroundHit(out leftHit)) {
-                carBody.AddForceAtPosition(-carTransform.up * antiRollForce,carAxis.leftWheelTransform.position);
-            }
-
-            if (!carAxis.rightWheelCollider.GetGroundHit(out rightHit))
-            {
-                carBody.AddForceAtPosition(-carTransform.up * antiRollForce, carAxis.rightWheelTransform.position);
-            }
-        }
     }
 
     private void Record()
