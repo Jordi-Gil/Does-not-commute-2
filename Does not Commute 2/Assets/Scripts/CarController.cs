@@ -29,13 +29,11 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private float brake = 2500f;
     [SerializeField]
-    private float rotationSpeed;
+    private Vector3 CenterOfMass;
     [SerializeField]
     private bool controlUser = true;
     [SerializeField]
     private List<CarAxis> Info_Axis;
-    [SerializeField]
-    private Vector3 CenterOfMass;
 
     private float gasInput;
     private float brakeInput;

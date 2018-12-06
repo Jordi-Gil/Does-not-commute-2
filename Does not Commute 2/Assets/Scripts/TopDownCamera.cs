@@ -14,8 +14,6 @@ public class TopDownCamera : MonoBehaviour {
     [SerializeField]
     private float height = 20f;
     [SerializeField]
-    private float angle = 45f;
-    [SerializeField]
     private float smoothVelocity = 0.5f;
     
     private Transform cameraTransform;

@@ -292,7 +292,6 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   distance: 10
   height: 20
-  angle: 45
   smoothVelocity: 2
 --- !u!1001 &275624186
 Prefab:
