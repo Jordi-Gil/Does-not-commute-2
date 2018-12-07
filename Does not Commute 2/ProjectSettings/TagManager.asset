@@ -5,10 +5,37 @@ TagManager:
   serializedVersion: 2
   tags:
   - Manager
-  - CheckPoint0
-  - CheckPoint1
-  - CheckPoint2
   - CenterOfMass
+  - Car1
+  - Car1start
+  - Car1end
+  - Car2
+  - Car2start
+  - Car2end
+  - Car3
+  - Car3start
+  - Car3end
+  - Car4
+  - Car4start
+  - Car4end
+  - Car5
+  - Car5start
+  - Car5end
+  - Car6
+  - Car6start
+  - Car6end
+  - Car7
+  - Car7start
+  - Car7end
+  - Car8
+  - Car8start
+  - Car8end
+  - Car9
+  - Car9start
+  - Car9end
+  - Car10
+  - Car10start
+  - Car10end
   layers:
   - Default
   - TransparentFX

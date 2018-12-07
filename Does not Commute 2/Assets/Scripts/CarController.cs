@@ -23,13 +23,15 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private Rigidbody carBody;
     [SerializeField]
-    private float maxSteerAngle = 30;
+    private float maxSteerAngle = 10f;
     [SerializeField]
-    private float motorForce = 100;
+    private float motorForce = 400f;
     [SerializeField]
     private float brake = 2500f;
     [SerializeField]
-    private Vector3 CenterOfMass;
+    private float speed = 0;
+    [SerializeField]
+    private Vector3 CenterOfMass = new Vector3(0,-3, 0.5f);
     [SerializeField]
     private bool controlUser = true;
     [SerializeField]
@@ -65,22 +67,25 @@ public class CarController : MonoBehaviour
             Braking();
             UpdateWheelPoses();
             Record();
+
         }
         else {
             Play();
         }
+
+        speed = carBody.velocity.magnitude * 3.6f;
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(gameObject.tag))
+        if (other.gameObject.CompareTag(gameObject.tag+"end"))
         {
             if (controlUser)
             {
-                levelManager.NextRound(path);
-                
+                carBody.isKinematic = true;
+                levelManager.NextRound(path);   
             }
-            
         }
     }
     #endregion
@@ -88,7 +93,7 @@ public class CarController : MonoBehaviour
     #region Privaye Methods
     private void GetInput()
     {  
-        gasInput = Input.GetAxis("Vertical");
+        gasInput = Mathf.Clamp(Input.GetAxis("Vertical"),-0.5f,0.5f);
         steerInput = Input.GetAxis("Horizontal");
         brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
         handbrakeInput = Mathf.Abs(Input.GetAxis("Jump")); //Space bar

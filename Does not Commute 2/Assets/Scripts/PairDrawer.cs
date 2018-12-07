@@ -13,14 +13,20 @@ public class PairDrawer : PropertyDrawer
         int indent = EditorGUI.indentLevel;
         EditorGUI.indentLevel = 0;
 
-        Rect firstRect = new Rect(position.x, position.y,position.width * 0.5f, position.height);
-        Rect secondRect = new Rect(position.x + position.width * 0.5f, position.y, position.width * 0.5f, position.height);
+        Rect firstRect = new Rect(position.x, position.y,position.width * 0.33f, position.height);
+        Rect secondRect = new Rect(position.x + position.width * 0.33f, position.y, position.width * 0.33f, position.height);
+        Rect carRect = new Rect(position.x + position.width * 0.66f, position.y, position.width * 0.33f, position.height);
 
-        SerializedProperty firstProp = property.FindPropertyRelative("first");
-        SerializedProperty secondProp = property.FindPropertyRelative("second");
+        SerializedProperty carProp = property.FindPropertyRelative("car");
+        SerializedProperty firstProp = property.FindPropertyRelative("start");
+        SerializedProperty secondProp = property.FindPropertyRelative("end");
 
+        GUI.enabled = false;
+        EditorGUI.PropertyField(carRect, carProp, GUIContent.none);
         EditorGUI.PropertyField(firstRect,firstProp,GUIContent.none);
         EditorGUI.PropertyField(secondRect, secondProp, GUIContent.none);
+        GUI.enabled = true;
+
 
         EditorGUI.EndProperty();
     }

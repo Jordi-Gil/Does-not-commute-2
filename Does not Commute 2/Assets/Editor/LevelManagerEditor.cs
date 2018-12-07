@@ -7,13 +7,13 @@ public class LevelManagerEditor : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
-
+        
         SerializedProperty roundProp = serializedObject.FindProperty("round");
         GUIContent roundContent = new GUIContent("Round");
         EditorGUILayout.PropertyField(roundProp, roundContent);
 
-        GUI.enabled = false;
         SerializedProperty cameraProp = serializedObject.FindProperty("scriptCamera");
+        GUI.enabled = false;
         EditorGUILayout.PropertyField(cameraProp);
         GUI.enabled = true;
 

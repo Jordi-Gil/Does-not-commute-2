@@ -4,15 +4,24 @@ using UnityEngine;
 
 
 [System.Serializable]
-public struct TransformPair
+public class TransformPair
 {
     [SerializeField]
-    private Transform first;
+    private GameObject car;
     [SerializeField]
-    private Transform second;
+    private Transform start;
+    [SerializeField]
+    private Transform end;
 
-    public Transform p_first { set { first = value; } get { return first; } }
-    public Transform p_second { set { second = value; } get { return second; } }
+    public TransformPair(GameObject _car, Transform _start, Transform _end)
+    {
+        car = _car;
+        start = _start;
+        end = _end;
+    }
+    public Transform p_start { set { start = value; } get { return start; } }
+    public Transform p_end { set { end = value; } get { return end; } }
+    public GameObject p_car { set { car = value; } get { return car; } }
 }
 
 public class LevelManager : MonoBehaviour
@@ -30,36 +39,68 @@ public class LevelManager : MonoBehaviour
     private List<PathCompleted> pathCompleted;
     [SerializeField]
     private GameObject activeCar;
-    #endregion
 
+    private int maxRounds;
+    #endregion
 
     #region Main Methods
     // Use this for initialization
     private void Start ()
     {
         pathCompleted = new List<PathCompleted>();
-        activeCar = Instantiate(carsPrefabs[round], paths[round].p_first.position, Quaternion.identity);
-        Debug.Log("Instanciado el coche "+activeCar.name);
-        //carsPrefabs[round] = activeCar;
+        MakePaths();
+        maxRounds = paths.Count;
+        activeCar = paths[round].p_car;
+        activeCar.SetActive(true);
         scriptCamera.ChangeTarget(activeCar);
 	}
+    #endregion
+
+    #region Private Methods
+    private void MakePaths()
+    {
+        while(carsPrefabs.Count > 0)
+        {
+            int carIndex = Random.Range(0,carsPrefabs.Count-1);
+
+            GameObject car = carsPrefabs[carIndex];
+            
+            string start = car.tag + "start";
+            string end = car.tag + "end";
+
+            Debug.Log(start);
+            
+            Transform startT = GameObject.FindGameObjectWithTag(start).GetComponent<Transform>();
+            Transform endT = GameObject.FindGameObjectWithTag(end).GetComponent<Transform>();
+
+            car = Instantiate(car, startT.position, startT.rotation);
+            Debug.Log("Car " + car.tag + " instantiated");
+            car.SetActive(false);
+
+            paths.Add(new TransformPair(car,startT,endT));
+
+            carsPrefabs.RemoveAt(carIndex);
+        }
+    }
     #endregion
 
     #region Public Methods
     public void NextRound(List<PointInTime> pathCar)
     {
-        Debug.Log("Next Round!");
+        
         TransformPair path = paths[round];
-        pathCompleted.Add(new PathCompleted(activeCar, path.p_first.position, path.p_first.rotation, path.p_second.position, pathCar));
+        pathCompleted.Add(new PathCompleted(path.p_car, path.p_start.position, path.p_start.rotation, path.p_end.position, pathCar));
         round += 1;
-        if (round >= carsPrefabs.Count)
+        Debug.Log("Next Round: "+round);
+        if (round >= maxRounds)
         {
             Finish();
         }
         else
         {
-            activeCar = Instantiate(carsPrefabs[round], paths[round].p_first.position, Quaternion.identity);
-            carsPrefabs[round] = activeCar;
+            activeCar = paths[round].p_car;
+            activeCar.SetActive(true);
+            Debug.Log("Active car: " + activeCar.name);
             scriptCamera.ChangeTarget(activeCar);
 
             InstantiateIA();
@@ -67,7 +108,7 @@ public class LevelManager : MonoBehaviour
     }
     #endregion
 
-    #region Public Methods
+    #region Private Methods
     private void InstantiateIA()
     {
         foreach (PathCompleted pathComp in pathCompleted)
@@ -84,6 +125,7 @@ public class LevelManager : MonoBehaviour
 
     private void Finish()
     {
+        Debug.Log("Play finished");
         foreach (PathCompleted pathComp in pathCompleted)
         {
             Destroy(pathComp.getCar());
