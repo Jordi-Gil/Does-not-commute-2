@@ -41,8 +41,6 @@ public class TopDownCamera : MonoBehaviour {
         Vector3 worldPosition = (Vector3.forward * -distance) + (Vector3.up * height);
    
         Debug.DrawLine(targetTransform.position, worldPosition, Color.red);
-        //Vector3 rotatedVector = Quaternion.AngleAxis(angle, Vector3.up) * worldPosition;
-        //Debug.DrawLine(targetTransform.position, rotatedVector, Color.green);
 
         Vector3 flatCarPosition = targetTransform.position;
         flatCarPosition.y = 40f;

@@ -9,18 +9,18 @@ public class TransformPair
     [SerializeField]
     private GameObject car;
     [SerializeField]
-    private Transform start;
+    private GameObject start;
     [SerializeField]
-    private Transform end;
+    private GameObject end;
 
-    public TransformPair(GameObject _car, Transform _start, Transform _end)
+    public TransformPair(GameObject _car, GameObject _start, GameObject _end)
     {
         car = _car;
         start = _start;
         end = _end;
     }
-    public Transform p_start { set { start = value; } get { return start; } }
-    public Transform p_end { set { end = value; } get { return end; } }
+    public GameObject p_start { set { start = value; } get { return start; } }
+    public GameObject p_end { set { end = value; } get { return end; } }
     public GameObject p_car { set { car = value; } get { return car; } }
 }
 
@@ -32,13 +32,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private TopDownCamera scriptCamera;
     [SerializeField]
+    private ArrowHelp scriptArrow;
+    [SerializeField]
+    private GameObject activeCar;
+    [SerializeField]
     private List<GameObject> carsPrefabs;
     [SerializeField]
     private List<TransformPair> paths;
     [SerializeField]
     private List<PathCompleted> pathCompleted;
-    [SerializeField]
-    private GameObject activeCar;
 
     private int maxRounds;
     #endregion
@@ -51,6 +53,7 @@ public class LevelManager : MonoBehaviour
         MakePaths();
         maxRounds = paths.Count;
         activeCar = paths[round].p_car;
+        scriptArrow.setTarget(paths[round].p_end.gameObject);
         activeCar.SetActive(true);
         scriptCamera.ChangeTarget(activeCar);
 	}
@@ -69,12 +72,12 @@ public class LevelManager : MonoBehaviour
             string end = car.tag + "end";
 
             Debug.Log(start);
-            
-            Transform startT = GameObject.FindGameObjectWithTag(start).GetComponent<Transform>();
-            Transform endT = GameObject.FindGameObjectWithTag(end).GetComponent<Transform>();
 
-            car = Instantiate(car, startT.position, startT.rotation);
-            Debug.Log("Car " + car.tag + " instantiated");
+            GameObject startT = GameObject.FindGameObjectWithTag(start);
+            GameObject endT = GameObject.FindGameObjectWithTag(end);
+
+            car = Instantiate(car, startT.transform.position, startT.transform.rotation);
+            
             car.SetActive(false);
 
             paths.Add(new TransformPair(car,startT,endT));
@@ -89,7 +92,7 @@ public class LevelManager : MonoBehaviour
     {
         
         TransformPair path = paths[round];
-        pathCompleted.Add(new PathCompleted(path.p_car, path.p_start.position, path.p_start.rotation, path.p_end.position, pathCar));
+        pathCompleted.Add(new PathCompleted(path.p_car, path.p_start.transform.position, path.p_start.transform.rotation, path.p_end.transform.position, pathCar));
         round += 1;
         Debug.Log("Next Round: "+round);
         if (round >= maxRounds)
@@ -99,8 +102,8 @@ public class LevelManager : MonoBehaviour
         else
         {
             activeCar = paths[round].p_car;
+            scriptArrow.setTarget(paths[round].p_end.gameObject);
             activeCar.SetActive(true);
-            Debug.Log("Active car: " + activeCar.name);
             scriptCamera.ChangeTarget(activeCar);
 
             InstantiateIA();
@@ -109,6 +112,7 @@ public class LevelManager : MonoBehaviour
     #endregion
 
     #region Private Methods
+
     private void InstantiateIA()
     {
         foreach (PathCompleted pathComp in pathCompleted)
@@ -125,7 +129,7 @@ public class LevelManager : MonoBehaviour
 
     private void Finish()
     {
-        Debug.Log("Play finished");
+        
         foreach (PathCompleted pathComp in pathCompleted)
         {
             Destroy(pathComp.getCar());

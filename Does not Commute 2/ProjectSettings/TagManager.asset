@@ -36,6 +36,9 @@ TagManager:
   - Car10
   - Car10start
   - Car10end
+  - Car11
+  - Car11start
+  - Car11end
   layers:
   - Default
   - TransparentFX

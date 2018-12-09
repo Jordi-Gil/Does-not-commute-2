@@ -23,15 +23,13 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private Rigidbody carBody;
     [SerializeField]
-    private float maxSteerAngle = 10f;
+    private float maxSteerAngle = 15f;
     [SerializeField]
-    private float motorForce = 400f;
+    private float motorForce = 150;
     [SerializeField]
     private float brake = 2500f;
     [SerializeField]
-    private float speed = 0;
-    [SerializeField]
-    private Vector3 CenterOfMass = new Vector3(0,-3, 0.5f);
+    private float antiRollForce = 5000f;
     [SerializeField]
     private bool controlUser = true;
     [SerializeField]
@@ -54,7 +52,7 @@ public class CarController : MonoBehaviour
         levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
         path = new List<PointInTime>();
         
-        carBody.centerOfMass = CenterOfMass;
+        carBody.centerOfMass = Vector3.down;
     }
 
     void FixedUpdate()
@@ -64,17 +62,14 @@ public class CarController : MonoBehaviour
             GetInput();
             Steer();
             Accelerate();
+            AntiRollBars();
             Braking();
             UpdateWheelPoses();
             Record();
-
         }
         else {
             Play();
         }
-
-        speed = carBody.velocity.magnitude * 3.6f;
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -93,10 +88,10 @@ public class CarController : MonoBehaviour
     #region Privaye Methods
     private void GetInput()
     {  
-        gasInput = Mathf.Clamp(Input.GetAxis("Vertical"),-0.5f,0.5f);
+        gasInput = Input.GetAxis("Vertical");
         steerInput = Input.GetAxis("Horizontal");
         brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
-        handbrakeInput = Mathf.Abs(Input.GetAxis("Jump")); //Space bar
+        handbrakeInput = Input.GetKey(KeyCode.Space) ? 1f : 0f;
     }
 
     private void Steer()
@@ -172,6 +167,21 @@ public class CarController : MonoBehaviour
 
         _transform.position = _position;
         _transform.rotation = _quat;
+    }
+
+    private void AntiRollBars()
+    {
+        foreach (CarAxis carAxis in Info_Axis)
+        {
+            WheelHit wheelHitL, wheelHitR;
+            bool groundedWheelLeft = carAxis.leftWheelCollider.GetGroundHit(out wheelHitL);
+            bool groundedWheelRight = carAxis.rightWheelCollider.GetGroundHit(out wheelHitR);
+
+            if (!groundedWheelLeft)
+                carBody.AddForceAtPosition(-carAxis.leftWheelCollider.transform.up * antiRollForce, carAxis.leftWheelCollider.transform.position);
+            if (!groundedWheelRight)
+                carBody.AddForceAtPosition(-carAxis.rightWheelCollider.transform.up * antiRollForce, carAxis.rightWheelCollider.transform.position);
+        }
     }
 
     private void Record()
