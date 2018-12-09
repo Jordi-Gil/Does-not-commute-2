@@ -43,6 +43,7 @@ public class CarController : MonoBehaviour
     private float motorTorque;
     private LevelManager levelManager;
 
+    [SerializeField]
     private List<PointInTime> path;
     #endregion
 
@@ -78,6 +79,7 @@ public class CarController : MonoBehaviour
         {
             if (controlUser)
             {
+                gameObject.SetActive(false);
                 carBody.isKinematic = true;
                 levelManager.NextRound(path);   
             }

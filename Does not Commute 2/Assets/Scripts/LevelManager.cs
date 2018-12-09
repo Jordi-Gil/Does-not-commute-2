@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 
 [System.Serializable]
 public class TransformPair
@@ -32,7 +33,13 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private TopDownCamera scriptCamera;
     [SerializeField]
-    private ArrowHelp scriptArrow;
+    private ArrowHelper scriptArrow;
+    [SerializeField]
+    private RainManager scriptRain;
+    [SerializeField]
+    private Text textHintCar;
+    [SerializeField]
+    private TextMeshProUGUI textTime;
     [SerializeField]
     private GameObject activeCar;
     [SerializeField]
@@ -43,20 +50,29 @@ public class LevelManager : MonoBehaviour
     private List<PathCompleted> pathCompleted;
 
     private int maxRounds;
+    private float timeLeft = 80f;
     #endregion
 
     #region Main Methods
-    // Use this for initialization
     private void Start ()
     {
         pathCompleted = new List<PathCompleted>();
         MakePaths();
         maxRounds = paths.Count;
         activeCar = paths[round].p_car;
-        scriptArrow.setTarget(paths[round].p_end.gameObject);
+        scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
+        scriptRain.setTarget(activeCar);
         activeCar.SetActive(true);
         scriptCamera.ChangeTarget(activeCar);
-	}
+        textHintCar.text = activeCar.name + ' ' + activeCar.tag;
+    }
+
+    private void FixedUpdate()
+    {
+        timeLeft -= Time.deltaTime;
+        textTime.text = timeLeft.ToString("F2") + " s"; 
+    }
+
     #endregion
 
     #region Private Methods
@@ -70,9 +86,7 @@ public class LevelManager : MonoBehaviour
             
             string start = car.tag + "start";
             string end = car.tag + "end";
-
-            Debug.Log(start);
-
+            
             GameObject startT = GameObject.FindGameObjectWithTag(start);
             GameObject endT = GameObject.FindGameObjectWithTag(end);
 
@@ -102,9 +116,11 @@ public class LevelManager : MonoBehaviour
         else
         {
             activeCar = paths[round].p_car;
-            scriptArrow.setTarget(paths[round].p_end.gameObject);
+            scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
+            scriptRain.setTarget(activeCar);
             activeCar.SetActive(true);
             scriptCamera.ChangeTarget(activeCar);
+            textHintCar.text = activeCar.name + ' ' + activeCar.tag;
 
             InstantiateIA();
         }
@@ -118,18 +134,18 @@ public class LevelManager : MonoBehaviour
         foreach (PathCompleted pathComp in pathCompleted)
         {
             GameObject car = pathComp.getCar();
+            car.SetActive(true);
             car.transform.position = pathComp.getStartPosition();
             car.transform.rotation = pathComp.getStartRotation();
             List<PointInTime> path;
             pathComp.getPath(out path);
-            car.GetComponent<CarController>().setPath(path);
+            car.GetComponent<CarController>().setPath(new List<PointInTime>(path));
             car.GetComponent<CarController>().PlayIA();
         }
     }
 
     private void Finish()
-    {
-        
+    {   
         foreach (PathCompleted pathComp in pathCompleted)
         {
             Destroy(pathComp.getCar());

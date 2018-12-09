@@ -10,14 +10,12 @@ public class TopDownCamera : MonoBehaviour {
     [SerializeField]
     private Transform targetTransform;
     [SerializeField]
-    private float distance = 10f;
+    private float height = 50f;
     [SerializeField]
-    private float height = 20f;
-    [SerializeField]
-    private float smoothVelocity = 0.5f;
+    private float smoothVelocity = 10f;
     
     private Transform cameraTransform;
-    private Vector3 refVelocity;
+    
     #endregion
 
 
@@ -25,30 +23,27 @@ public class TopDownCamera : MonoBehaviour {
     private void Start ()
     {
         cameraTransform = GetComponent<Transform>();
-        HandleCamera();
+        cameraTransform.rotation = Quaternion.identity;
+        cameraTransform.Rotate(90,0,0);
+        if (targetTransform != null)
+            HandleCamera();
     }
     #endregion   
 
     private void Update ()
     {
-        HandleCamera();
+        if(targetTransform != null)
+            HandleCamera();
     }
 
     #region Helper Methods
     private void HandleCamera()
     {
-        if (!targetTransform) return;
-        Vector3 worldPosition = (Vector3.forward * -distance) + (Vector3.up * height);
-   
-        Debug.DrawLine(targetTransform.position, worldPosition, Color.red);
 
-        Vector3 flatCarPosition = targetTransform.position;
-        flatCarPosition.y = 40f;
-        Vector3 finalPosition = flatCarPosition /*+ rotatedVector*/;
-        Debug.DrawLine(targetTransform.position, finalPosition, Color.blue);
-
-        cameraTransform.position = Vector3.SmoothDamp(cameraTransform.position,finalPosition,ref refVelocity ,smoothVelocity);
-        cameraTransform.LookAt(targetTransform.position); 
+        Vector3 finalPosition = targetTransform.position;
+        finalPosition.y += height;
+        cameraTransform.position = Vector3.Lerp(cameraTransform.position, finalPosition, smoothVelocity);
+        
     }
     #endregion
 
