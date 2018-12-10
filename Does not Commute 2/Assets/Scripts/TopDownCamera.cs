@@ -24,7 +24,7 @@ public class TopDownCamera : MonoBehaviour {
     {
         cameraTransform = GetComponent<Transform>();
         cameraTransform.rotation = Quaternion.identity;
-        cameraTransform.Rotate(90,0,0);
+        cameraTransform.Rotate(80,0,0);
         if (targetTransform != null)
             HandleCamera();
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25146285, g: 0.13102314, b: 0.06575395, a: 1}
+  m_IndirectSpecularColor: {r: 0.25145003, g: 0.13110185, b: 0.06558837, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -216,6 +216,16 @@ Prefab:
     - target: {fileID: 4085803955581888, guid: 87fb928d15b4f934b8bb3677da60b4ad, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 64613715643743264, guid: 87fb928d15b4f934b8bb3677da60b4ad,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64613715643743264, guid: 87fb928d15b4f934b8bb3677da60b4ad,
+        type: 2}
+      propertyPath: m_CookingOptions
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87fb928d15b4f934b8bb3677da60b4ad, type: 2}
@@ -2144,6 +2154,15 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012149107169804, guid: e1c5e3a218275f842a5c9f08cd9391bc, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224105846052874034, guid: e1c5e3a218275f842a5c9f08cd9391bc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -171
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c5e3a218275f842a5c9f08cd9391bc, type: 2}
@@ -9960,6 +9979,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 64471493131664102, guid: f554d90ccc052744ca25fd0a646c6990,
+        type: 2}
+      propertyPath: m_CookingOptions
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f554d90ccc052744ca25fd0a646c6990, type: 2}
   m_IsPrefabAsset: 0
@@ -16803,6 +16827,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 64629104257250614, guid: 18ade0e3622359045b14bd89b907a784,
+        type: 2}
+      propertyPath: m_CookingOptions
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ade0e3622359045b14bd89b907a784, type: 2}
   m_IsPrefabAsset: 0
@@ -18156,25 +18185,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57f96463c18dcbd4ea7d22519bf84a31, type: 3}
   m_IsPrefabAsset: 0
---- !u!1 &2124850400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1285679255436410, guid: 87fb928d15b4f934b8bb3677da60b4ad,
-    type: 2}
-  m_PrefabInternal: {fileID: 18011365}
---- !u!64 &2124850402
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124850400}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 1d7d65af42bff4140a875e2ed3d12855, type: 3}
 --- !u!1001 &2140108814
 Prefab:
   m_ObjectHideFlags: 0
