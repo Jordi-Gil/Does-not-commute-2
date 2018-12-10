@@ -61,11 +61,12 @@ public class LevelManager : MonoBehaviour
         maxRounds = paths.Count;
         activeCar = paths[round].p_car;
         scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
-        scriptRain.setTarget(activeCar);
+        if(scriptRain != null) scriptRain.setTarget(activeCar);
         activeCar.SetActive(true);
         scriptCamera.ChangeTarget(activeCar);
         textHintCar.text = activeCar.name + ' ' + activeCar.tag;
     }
+    
 
     private void FixedUpdate()
     {
@@ -117,7 +118,7 @@ public class LevelManager : MonoBehaviour
         {
             activeCar = paths[round].p_car;
             scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
-            scriptRain.setTarget(activeCar);
+            if (scriptRain != null) scriptRain.setTarget(activeCar);
             activeCar.SetActive(true);
             scriptCamera.ChangeTarget(activeCar);
             textHintCar.text = activeCar.name + ' ' + activeCar.tag;

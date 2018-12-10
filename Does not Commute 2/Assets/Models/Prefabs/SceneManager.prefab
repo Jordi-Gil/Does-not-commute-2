@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1234214214371536}
+  m_IsPrefabAsset: 1
+--- !u!1 &1234214214371536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4946794135928654}
+  - component: {fileID: 114415754741472452}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4946794135928654
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234214214371536}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -155.7, y: 5.786182, z: -125.1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114415754741472452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234214214371536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600915342b57967469d2c63f2885854b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  round: 0
+  scriptCamera: {fileID: 0}
+  scriptArrow: {fileID: 0}
+  scriptRain: {fileID: 0}
+  textHintCar: {fileID: 0}
+  textTime: {fileID: 0}
+  activeCar: {fileID: 0}
+  carsPrefabs:
+  - {fileID: 1634266169628588, guid: b49f769d5514d704ea3a0888b9b1408e, type: 2}
+  - {fileID: 1061289017247402, guid: 5e782fa7996c4084c8f4bba09d247667, type: 2}
+  - {fileID: 1170623850183400, guid: 05a325750ee22c04c8be48376a1a4e38, type: 2}
+  - {fileID: 1687608291474030, guid: 3b5ff872e06c6f34e87cbdf245eedfd7, type: 2}
+  - {fileID: 1661791236079072, guid: 55e2e44f9816491408bade2257b2554d, type: 2}
+  - {fileID: 1405365596392022, guid: 75b12c17dad11484f91b7667455e90b8, type: 2}
+  - {fileID: 1193340280965860, guid: a6b094c39f55f1f42aadd874df5e4e88, type: 2}
+  - {fileID: 1247693492802078, guid: 772e5ebf570e66c419103c72a13117b7, type: 2}
+  - {fileID: 1924175333117148, guid: 863d081a2a4f6a140a498da178ff0005, type: 2}
+  - {fileID: 1665659989631082, guid: c216c6557a8090c4dbf283f4f20c30cf, type: 2}
+  paths: []
+  pathCompleted: []

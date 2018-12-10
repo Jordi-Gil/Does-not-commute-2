@@ -145,7 +145,12 @@ ModelImporter:
     4300042: Wood_3
     4300044: Leaves_4
     4300046: Wood_4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: 2100000, guid: 6d25c39c31dfea24db621ef437adafe6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

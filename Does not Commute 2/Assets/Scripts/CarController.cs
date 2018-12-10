@@ -56,7 +56,7 @@ public class CarController : MonoBehaviour
         carBody.centerOfMass = Vector3.down;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (controlUser)
         {
@@ -92,7 +92,7 @@ public class CarController : MonoBehaviour
     {  
         gasInput = Input.GetAxis("Vertical");
         steerInput = Input.GetAxis("Horizontal");
-        brakeInput = Input.GetKey(KeyCode.R) ? 1 : 0;
+        brakeInput = Input.GetKey(KeyCode.F) ? 1 : 0;
         handbrakeInput = Input.GetKey(KeyCode.Space) ? 1f : 0f;
     }
 
