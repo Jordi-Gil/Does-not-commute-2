@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class TransformPair
@@ -125,6 +126,21 @@ public class LevelManager : MonoBehaviour
 
             InstantiateIA();
         }
+    }
+
+    public void RestartRound()
+    {
+        
+    }
+
+    public void RestartLevel()
+    {
+
+    }
+
+    public void Exit()
+    {
+        SceneManager.LoadScene("Menu");
     }
     #endregion
 
