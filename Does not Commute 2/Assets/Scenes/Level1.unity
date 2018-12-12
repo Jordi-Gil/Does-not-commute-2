@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25146285, g: 0.13102314, b: 0.06575395, a: 1}
+  m_IndirectSpecularColor: {r: 0.25145003, g: 0.13110185, b: 0.06558837, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4907,6 +4907,7 @@ GameObject:
   - component: {fileID: 584425635}
   - component: {fileID: 584425637}
   - component: {fileID: 584425636}
+  - component: {fileID: 584425638}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4972,6 +4973,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584425634}
   m_CullTransparentMesh: 0
+--- !u!114 &584425638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584425634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.49019608}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &586168908
 Prefab:
   m_ObjectHideFlags: 0
@@ -13947,6 +13962,7 @@ GameObject:
   - component: {fileID: 1486551530}
   - component: {fileID: 1486551532}
   - component: {fileID: 1486551531}
+  - component: {fileID: 1486551533}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -14012,6 +14028,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1486551529}
   m_CullTransparentMesh: 0
+--- !u!114 &1486551533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486551529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.49019608}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1497242943
 Prefab:
   m_ObjectHideFlags: 0
@@ -20324,6 +20354,7 @@ GameObject:
   - component: {fileID: 1681377346}
   - component: {fileID: 1681377348}
   - component: {fileID: 1681377347}
+  - component: {fileID: 1681377349}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -20389,6 +20420,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1681377345}
   m_CullTransparentMesh: 0
+--- !u!114 &1681377349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681377345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.49019608}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1683918005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100036, guid: c805b921e296c334b9886f5e38da498c,
@@ -21617,6 +21662,7 @@ GameObject:
   - component: {fileID: 1835103904}
   - component: {fileID: 1835103906}
   - component: {fileID: 1835103905}
+  - component: {fileID: 1835103907}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -21682,6 +21728,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1835103903}
   m_CullTransparentMesh: 0
+--- !u!114 &1835103907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835103903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.49019608}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1837707023
 Prefab:
   m_ObjectHideFlags: 0
@@ -23480,7 +23540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2048376164
 RectTransform:
   m_ObjectHideFlags: 0
