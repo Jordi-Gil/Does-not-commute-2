@@ -213,5 +213,11 @@ public class CarController : MonoBehaviour
     {
         path = _path;
     }
+
+    public void Restart(Transform _transform)
+    {
+        path.Clear();
+        carTransform = _transform;
+    }
     #endregion
 }

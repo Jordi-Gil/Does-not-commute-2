@@ -67,7 +67,6 @@ public class LevelManager : MonoBehaviour
         scriptCamera.ChangeTarget(activeCar);
         textHintCar.text = activeCar.name + ' ' + activeCar.tag;
     }
-    
 
     private void FixedUpdate()
     {
@@ -130,7 +129,8 @@ public class LevelManager : MonoBehaviour
 
     public void RestartRound()
     {
-        
+        Debug.Log("Restarting Level...");
+        activeCar.GetComponent<CarController>().Restart(paths[round].p_start.transform);
     }
 
     public void RestartLevel()

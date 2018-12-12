@@ -30,7 +30,7 @@ public class PauseManager : MonoBehaviour {
 
     public void Resume()
     {
-        Debug.Log("Resuming");
+        Debug.Log("Resuming...");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
@@ -38,19 +38,28 @@ public class PauseManager : MonoBehaviour {
 
     public void RestartRound()
     {
-        Resume();
+        Debug.Log("Restarting Round...");
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1;
+        isPaused = false;
         manager.RestartRound();
     }
 
     public void RestartLevel()
     {
-        Resume();
+        Debug.Log("Restarting Level...");
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1;
+        isPaused = false;
         manager.RestartLevel();
     }
 
     public void Exit()
     {
-        Resume();
+        Debug.Log("Exitting...");
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1;
+        isPaused = false;
         manager.Exit();
     }
 
