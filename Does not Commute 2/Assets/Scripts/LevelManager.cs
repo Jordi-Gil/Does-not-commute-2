@@ -54,7 +54,8 @@ public class LevelManager : MonoBehaviour
 
     private int maxRounds;
     private float timeLeft;
-    
+
+    public static bool isLose;
     #endregion
 
     #region Main Methods
@@ -62,15 +63,7 @@ public class LevelManager : MonoBehaviour
     {
         timeLeft = time;
         pathCompleted = new List<PathCompleted>();
-        MakePaths();
-        maxRounds = paths.Count;
-        activeCar = paths[round].p_car;
-        Debug.Log(paths[round].p_start.transform.position);
-        scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
-        if(scriptRain != null) scriptRain.setTarget(activeCar);
-        activeCar.SetActive(true);
-        scriptCamera.ChangeTarget(activeCar);
-        textHintCar.text = activeCar.name + ' ' + activeCar.tag;
+        Initalize();
     }
 
     private void FixedUpdate()
@@ -88,11 +81,12 @@ public class LevelManager : MonoBehaviour
     #region Private Methods
     private void MakePaths()
     {
-        while(carsPrefabs.Count > 0)
+        List<GameObject> aux = new List<GameObject>(carsPrefabs);
+        while (aux.Count > 0)
         {
-            int carIndex = Random.Range(0,carsPrefabs.Count-1);
+            int carIndex = Random.Range(0, aux.Count-1);
 
-            GameObject car = carsPrefabs[carIndex];
+            GameObject car = aux[carIndex];
             
             string start = car.tag + "start";
             string end = car.tag + "end";
@@ -106,13 +100,13 @@ public class LevelManager : MonoBehaviour
 
             paths.Add(new TransformPair(car,startT,endT));
 
-            carsPrefabs.RemoveAt(carIndex);
+            aux.RemoveAt(carIndex);
         }
     }
 
     private void Lose()
     {
-
+        isLose = true;
     }
     #endregion
 
@@ -177,9 +171,33 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void RestartGame()
+    {
+        timeLeft = time;
+        foreach(TransformPair car in paths)
+        {
+            Destroy(car.p_car);
+        }
+        paths.Clear();
+        pathCompleted.Clear();
+        Initalize();
+    }
     #endregion
 
     #region Private Methods
+
+    private void Initalize()
+    {
+        MakePaths();
+        maxRounds = paths.Count;
+        activeCar = paths[round].p_car;
+        scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
+        if (scriptRain != null) scriptRain.setTarget(activeCar);
+        activeCar.SetActive(true);
+        scriptCamera.ChangeTarget(activeCar);
+        textHintCar.text = activeCar.name + ' ' + activeCar.tag;
+    }
 
     private void InstantiateIA()
     {

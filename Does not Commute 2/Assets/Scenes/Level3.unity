@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 171211584}
   - component: {fileID: 171211583}
   m_Layer: 0
-  m_Name: Image
+  m_Name: PlayAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1067,7 +1067,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 171211584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1876323316}
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &171211584
@@ -6583,7 +6594,7 @@ GameObject:
   - component: {fileID: 1109817325}
   - component: {fileID: 1109817324}
   m_Layer: 0
-  m_Name: Image (1)
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6646,7 +6657,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1109817325}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1876323316}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1109817325
@@ -7551,6 +7573,11 @@ Prefab:
       propertyPath: textTime
       value: 
       objectReference: {fileID: 1434581467}
+    - target: {fileID: 114415754741472452, guid: 8f7f29eda7749764a8ba373d1fbcf99f,
+        type: 2}
+      propertyPath: time
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f7f29eda7749764a8ba373d1fbcf99f, type: 2}
   m_IsPrefabAsset: 0
@@ -11723,6 +11750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 560984074}
+  outOfTimeUI: {fileID: 2051771485}
   manager: {fileID: 521562186}
 --- !u!1001 &1895597831
 Prefab:
@@ -12063,7 +12091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2051771486
 RectTransform:
   m_ObjectHideFlags: 0
