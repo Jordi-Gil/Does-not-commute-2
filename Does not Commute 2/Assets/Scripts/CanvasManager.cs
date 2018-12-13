@@ -68,6 +68,7 @@ public class CanvasManager : MonoBehaviour {
     {
         Debug.Log("Exitting...");
         pauseMenuUI.SetActive(false);
+        outOfTimeUI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
         manager.Exit();
