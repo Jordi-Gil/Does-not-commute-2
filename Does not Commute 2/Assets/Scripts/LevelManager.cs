@@ -54,6 +54,7 @@ public class LevelManager : MonoBehaviour
 
     private int maxRounds;
     private float timeLeft;
+    private float timeIniRound;
 
     public static bool isLose;
     #endregion
@@ -62,6 +63,7 @@ public class LevelManager : MonoBehaviour
     private void Start ()
     {
         timeLeft = time;
+        timeIniRound = timeLeft;
         pathCompleted = new List<PathCompleted>();
         Initalize();
     }
@@ -130,7 +132,7 @@ public class LevelManager : MonoBehaviour
             activeCar.SetActive(true);
             scriptCamera.ChangeTarget(activeCar);
             textHintCar.text = activeCar.name + ' ' + activeCar.tag;
-
+            timeIniRound = timeLeft;
             InstantiateIA();
         }
     }
@@ -139,6 +141,7 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Restarting Round manager...");
         activeCar.GetComponent<CarController>().Restart(paths[round].p_start.transform);
+        timeLeft = timeIniRound - 1;
     }
 
     public void RestartLevel()
