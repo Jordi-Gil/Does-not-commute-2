@@ -32,6 +32,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private int round = 0;
     [SerializeField]
+    private float time = 200f;
+    [SerializeField]
     private TopDownCamera scriptCamera;
     [SerializeField]
     private ArrowHelper scriptArrow;
@@ -51,16 +53,19 @@ public class LevelManager : MonoBehaviour
     private List<PathCompleted> pathCompleted;
 
     private int maxRounds;
-    private float timeLeft = 80f;
+    private float timeLeft;
+    
     #endregion
 
     #region Main Methods
     private void Start ()
     {
+        timeLeft = time;
         pathCompleted = new List<PathCompleted>();
         MakePaths();
         maxRounds = paths.Count;
         activeCar = paths[round].p_car;
+        Debug.Log(paths[round].p_start.transform.position);
         scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
         if(scriptRain != null) scriptRain.setTarget(activeCar);
         activeCar.SetActive(true);
@@ -71,7 +76,11 @@ public class LevelManager : MonoBehaviour
     private void FixedUpdate()
     {
         timeLeft -= Time.deltaTime;
-        textTime.text = timeLeft.ToString("F2") + " s"; 
+        textTime.text = timeLeft.ToString("F2") + " s";
+        if (timeLeft <= 0)
+        {
+            Lose();
+        }
     }
 
     #endregion
@@ -99,6 +108,11 @@ public class LevelManager : MonoBehaviour
 
             carsPrefabs.RemoveAt(carIndex);
         }
+    }
+
+    private void Lose()
+    {
+
     }
     #endregion
 
@@ -129,13 +143,34 @@ public class LevelManager : MonoBehaviour
 
     public void RestartRound()
     {
-        Debug.Log("Restarting Level...");
+        Debug.Log("Restarting Round manager...");
         activeCar.GetComponent<CarController>().Restart(paths[round].p_start.transform);
     }
 
     public void RestartLevel()
     {
+        timeLeft = time;
+        activeCar.GetComponent<CarController>().PlayPlayer(paths[round].p_start.transform.position,
+                                                           paths[round].p_start.transform.rotation);
+        activeCar.SetActive(false);
+        foreach(PathCompleted pathComp in pathCompleted)
+        {
+            GameObject car = pathComp.getCar();
+            car.transform.position = pathComp.getStartPosition();
+            car.transform.rotation = pathComp.getStartRotation();
+            car.GetComponent<CarController>().PlayPlayer(pathComp.getStartPosition(), pathComp.getStartRotation());
+            car.SetActive(false);
+        }
 
+        pathCompleted.Clear();
+
+        round = 0;
+        activeCar = paths[round].p_car;
+        activeCar.SetActive(true);
+        scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
+        if (scriptRain != null) scriptRain.setTarget(activeCar);
+        scriptCamera.ChangeTarget(activeCar);
+        textHintCar.text = activeCar.name + ' ' + activeCar.tag;
     }
 
     public void Exit()

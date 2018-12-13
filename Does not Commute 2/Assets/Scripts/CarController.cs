@@ -83,6 +83,10 @@ public class CarController : MonoBehaviour
                 carBody.isKinematic = true;
                 levelManager.NextRound(path);   
             }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
     #endregion
@@ -209,6 +213,15 @@ public class CarController : MonoBehaviour
         controlUser = false;
     }
 
+    public void PlayPlayer(Vector3 _position, Quaternion _rotation)
+    {
+        controlUser = true;
+        path.Clear();
+        carTransform.position = _position;
+        carTransform.rotation = _rotation;
+        carBody.isKinematic = false;
+    }
+
     public void setPath(List<PointInTime> _path)
     {
         path = _path;
@@ -217,7 +230,11 @@ public class CarController : MonoBehaviour
     public void Restart(Transform _transform)
     {
         path.Clear();
-        carTransform = _transform;
+        Debug.Log(path.Count);
+        carTransform.position = _transform.position;
+        carTransform.rotation = _transform.rotation;
+        Debug.Log(_transform.position);
     }
+
     #endregion
 }
