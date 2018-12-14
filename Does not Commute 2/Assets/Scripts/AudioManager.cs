@@ -21,8 +21,12 @@ public class AudioManager : MonoBehaviour {
     #region Public Methods
     public void BoostSound()
     {
-        
         audio.PlayOneShot(clips[0]);
+    }
+
+    public void HitSound()
+    {
+        audio.PlayOneShot(clips[1]);
     }
     #endregion
 }

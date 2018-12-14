@@ -47,8 +47,6 @@ public class CarController : MonoBehaviour
     private float steeringAngle;
     private float motorTorque;
     
-    private float motorForceOrig;
-
     [SerializeField]
     private List<PointInTime> path;
     #endregion
@@ -56,7 +54,6 @@ public class CarController : MonoBehaviour
     #region Unity Methods
     private void Start()
     {
-        motorForceOrig = motorForce;
         levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         path = new List<PointInTime>();
@@ -87,8 +84,9 @@ public class CarController : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Collision"))
         {
-            Debug.Log(speed);
-            if(speed > 45f) { 
+
+            audioManager.HitSound();
+            if (speed > 45f) { 
                 gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 motorForce -= 20f;
             }
@@ -283,6 +281,11 @@ public class CarController : MonoBehaviour
         carTransform.position = _transform.position;
         carTransform.rotation = _transform.rotation;
         Debug.Log(_transform.position);
+    }
+
+    public void FixCar(float _value)
+    {
+        motorForce += _value;
     }
 
     #endregion

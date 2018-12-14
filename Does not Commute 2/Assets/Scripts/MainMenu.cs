@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour {
     #region Variables
     [SerializeField]
     private AudioManagerMenu audioManagerMenu;
+    [SerializeField]
+    private GameObject credits;
     
     #endregion
 
@@ -21,8 +23,19 @@ public class MainMenu : MonoBehaviour {
         
         Application.Quit();
 	}
+
     public void PlayGame() {
         SceneManager.LoadScene("Level1");
+    }
+
+    public void Credits()
+    {
+        credits.SetActive(true);
+    }
+
+    public void Menu()
+    {
+        credits.SetActive(false);
     }
     #endregion
 }

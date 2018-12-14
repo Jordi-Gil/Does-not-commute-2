@@ -63,7 +63,7 @@ public class LevelManager : MonoBehaviour
     public static bool isLose;
     #endregion
 
-    #region Main Methods
+    #region Unity Methods
     private void Start ()
     {
         Debug.Log("Start");
@@ -147,6 +147,8 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Restarting Round manager...");
         activeCar.GetComponent<CarController>().Restart(paths[round].p_start.transform);
+        activeCar.transform.GetChild(0).gameObject.SetActive(false);
+        activeCar.GetComponent<CarController>().FixCar(20f);
         timeLeft = timeIniRound - 1;
     }
 
@@ -155,10 +157,14 @@ public class LevelManager : MonoBehaviour
         timeLeft = time;
         activeCar.GetComponent<CarController>().PlayPlayer(paths[round].p_start.transform.position,
                                                            paths[round].p_start.transform.rotation);
+        activeCar.GetComponent<CarController>().FixCar(20f);
+        activeCar.transform.GetChild(0).gameObject.SetActive(false);
         activeCar.SetActive(false);
         foreach(PathCompleted pathComp in pathCompleted)
         {
             GameObject car = pathComp.getCar();
+            car.transform.GetChild(0).gameObject.SetActive(false);
+            car.GetComponent<CarController>().FixCar(20f);
             car.transform.position = pathComp.getStartPosition();
             car.transform.rotation = pathComp.getStartRotation();
             car.GetComponent<CarController>().PlayPlayer(pathComp.getStartPosition(), pathComp.getStartRotation());
