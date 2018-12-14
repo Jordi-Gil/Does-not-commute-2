@@ -156,6 +156,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Sky_small_color02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
   m_IsPrefabAsset: 0
@@ -225,6 +229,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
   m_IsPrefabAsset: 0
@@ -293,6 +301,10 @@ Prefab:
     - target: {fileID: 400000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
@@ -521,6 +533,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 169
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
   m_IsPrefabAsset: 0
@@ -686,6 +702,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
   m_IsPrefabAsset: 0
@@ -750,6 +770,10 @@ Prefab:
     - target: {fileID: 400000, guid: e6ba6a0b1488a7f49bb690db72604a34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e6ba6a0b1488a7f49bb690db72604a34, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ba6a0b1488a7f49bb690db72604a34, type: 3}
@@ -862,6 +886,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_House_02_color02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e47dc4e2a7cb5bb479e17c119279b76e, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e47dc4e2a7cb5bb479e17c119279b76e, type: 3}
   m_IsPrefabAsset: 0
@@ -926,6 +954,10 @@ Prefab:
     - target: {fileID: 400000, guid: f4e735ef7d098da49910ae85c9b17267, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f4e735ef7d098da49910ae85c9b17267, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e735ef7d098da49910ae85c9b17267, type: 3}
@@ -1115,6 +1147,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Factory (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
   m_IsPrefabAsset: 0
@@ -1179,6 +1215,10 @@ Prefab:
     - target: {fileID: 100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
       propertyPath: m_Name
       value: Building_Gift_Shop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
@@ -1410,6 +1450,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2233afb51d8dcd345871e53ebc904789, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2233afb51d8dcd345871e53ebc904789, type: 3}
   m_IsPrefabAsset: 0
@@ -1478,6 +1522,10 @@ Prefab:
     - target: {fileID: 400000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
@@ -1594,6 +1642,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f4e735ef7d098da49910ae85c9b17267, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e735ef7d098da49910ae85c9b17267, type: 3}
   m_IsPrefabAsset: 0
@@ -1658,6 +1710,10 @@ Prefab:
     - target: {fileID: 100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
       propertyPath: m_Name
       value: Building_Pizza (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
@@ -1728,6 +1784,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
   m_IsPrefabAsset: 0
@@ -1773,6 +1833,10 @@ Prefab:
     - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
       propertyPath: m_Name
       value: Building_Sky_big_color02 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
@@ -1986,6 +2050,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 210
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
   m_IsPrefabAsset: 0
@@ -2136,7 +2204,7 @@ GameObject:
   - component: {fileID: 243223356}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2190,11 +2258,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 243223355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -500, y: -0.05, z: -500}
+  m_LocalPosition: {x: -500, y: -0.15, z: -500}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 244
+  m_RootOrder: 245
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &247725879
 Prefab:
@@ -2377,6 +2445,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Auto_Service (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
   m_IsPrefabAsset: 0
@@ -2442,6 +2514,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Gift_Shop (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
   m_IsPrefabAsset: 0
@@ -2506,6 +2582,10 @@ Prefab:
     - target: {fileID: 100000, guid: 333beb8dbfdcf8a4694e514deeef351d, type: 3}
       propertyPath: m_Name
       value: Building_Coffee_Shop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 333beb8dbfdcf8a4694e514deeef351d, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333beb8dbfdcf8a4694e514deeef351d, type: 3}
@@ -2622,6 +2702,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Shoes_Shop (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a78383bf25603b4e9fc85d1dcd08017, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a78383bf25603b4e9fc85d1dcd08017, type: 3}
   m_IsPrefabAsset: 0
@@ -2691,6 +2775,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
   m_IsPrefabAsset: 0
@@ -2756,6 +2844,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
   m_IsPrefabAsset: 0
@@ -2820,6 +2912,10 @@ Prefab:
     - target: {fileID: 400000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
@@ -2935,6 +3031,10 @@ Prefab:
     - target: {fileID: 400000, guid: 333beb8dbfdcf8a4694e514deeef351d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 333beb8dbfdcf8a4694e514deeef351d, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333beb8dbfdcf8a4694e514deeef351d, type: 3}
@@ -3185,6 +3285,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4da34ea158e841543a8bd596681d3ad7, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4da34ea158e841543a8bd596681d3ad7, type: 3}
   m_IsPrefabAsset: 0
@@ -3336,6 +3440,10 @@ Prefab:
     - target: {fileID: 100000, guid: de8f0735de8bced4c8cc069d2c35a32e, type: 3}
       propertyPath: m_Name
       value: Building_Chicken_Shop (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de8f0735de8bced4c8cc069d2c35a32e, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de8f0735de8bced4c8cc069d2c35a32e, type: 3}
@@ -3525,6 +3633,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
   m_IsPrefabAsset: 0
@@ -3574,6 +3686,10 @@ Prefab:
     - target: {fileID: 400000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
@@ -3625,6 +3741,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
   m_IsPrefabAsset: 0
@@ -3675,6 +3795,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
   m_IsPrefabAsset: 0
@@ -3724,6 +3848,10 @@ Prefab:
     - target: {fileID: 400000, guid: e80bd1b765d795d479758565fbe21948, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bd1b765d795d479758565fbe21948, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e80bd1b765d795d479758565fbe21948, type: 3}
@@ -3789,6 +3917,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
       propertyPath: m_Name
       value: Building_Residential_color02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
@@ -3941,6 +4073,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 192
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
   m_IsPrefabAsset: 0
@@ -4005,6 +4141,10 @@ Prefab:
     - target: {fileID: 400000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
@@ -4145,6 +4285,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
   m_IsPrefabAsset: 0
@@ -4213,6 +4357,10 @@ Prefab:
     - target: {fileID: 400000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
@@ -4293,7 +4441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 161
+  m_RootOrder: 163
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &499087417
 MonoBehaviour:
@@ -4355,6 +4503,10 @@ Prefab:
     - target: {fileID: 400000, guid: 694da983a356c8d48a862b06c36165d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 694da983a356c8d48a862b06c36165d5, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 694da983a356c8d48a862b06c36165d5, type: 3}
@@ -4471,6 +4623,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
   m_IsPrefabAsset: 0
@@ -4540,6 +4696,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
   m_IsPrefabAsset: 0
@@ -4589,6 +4749,10 @@ Prefab:
     - target: {fileID: 400000, guid: abade5e32dd10234c92ee2be13b91ee0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: abade5e32dd10234c92ee2be13b91ee0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abade5e32dd10234c92ee2be13b91ee0, type: 3}
@@ -4658,6 +4822,10 @@ Prefab:
     - target: {fileID: 400000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
@@ -4793,6 +4961,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e1de89d296163f3469aa9872e7f34303, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1de89d296163f3469aa9872e7f34303, type: 3}
   m_IsPrefabAsset: 0
@@ -4857,6 +5029,10 @@ Prefab:
     - target: {fileID: 400000, guid: 773dc6b247c57164598eb312bc63822a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 773dc6b247c57164598eb312bc63822a, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 773dc6b247c57164598eb312bc63822a, type: 3}
@@ -4968,6 +5144,10 @@ Prefab:
     - target: {fileID: 400000, guid: ae1554f07dfb1fa43a327cd3bd67be93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ae1554f07dfb1fa43a327cd3bd67be93, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae1554f07dfb1fa43a327cd3bd67be93, type: 3}
@@ -5250,6 +5430,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -60
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
   m_IsPrefabAsset: 0
@@ -5472,6 +5656,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
   m_IsPrefabAsset: 0
@@ -5518,6 +5706,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Sky_small_color02 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
   m_IsPrefabAsset: 0
@@ -5563,6 +5755,10 @@ Prefab:
     - target: {fileID: 400000, guid: 9e990998be0e4724fa847bcdd5a79828, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9e990998be0e4724fa847bcdd5a79828, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e990998be0e4724fa847bcdd5a79828, type: 3}
@@ -5628,6 +5824,10 @@ Prefab:
     - target: {fileID: 400000, guid: ecf730d815c5e6448ac4df5d1a2cdf0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ecf730d815c5e6448ac4df5d1a2cdf0f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf730d815c5e6448ac4df5d1a2cdf0f, type: 3}
@@ -5917,6 +6117,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
   m_IsPrefabAsset: 0
@@ -5981,6 +6185,10 @@ Prefab:
     - target: {fileID: 100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
       propertyPath: m_Name
       value: Building_Bar (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
@@ -6093,6 +6301,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
   m_IsPrefabAsset: 0
@@ -6193,6 +6405,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 240
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
   m_IsPrefabAsset: 0
@@ -6242,6 +6458,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
@@ -6293,6 +6513,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
   m_IsPrefabAsset: 0
@@ -6334,6 +6558,10 @@ Prefab:
     - target: {fileID: 400000, guid: e1de89d296163f3469aa9872e7f34303, type: 3}
       propertyPath: m_RootOrder
       value: 179
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e1de89d296163f3469aa9872e7f34303, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1de89d296163f3469aa9872e7f34303, type: 3}
@@ -6496,6 +6724,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 87a46442fe686514db3b4ea4bcf9de01, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a46442fe686514db3b4ea4bcf9de01, type: 3}
   m_IsPrefabAsset: 0
@@ -6556,6 +6788,10 @@ Prefab:
     - target: {fileID: 400000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
       propertyPath: m_RootOrder
       value: 191
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
@@ -6626,6 +6862,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
   m_IsPrefabAsset: 0
@@ -6695,6 +6935,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
   m_IsPrefabAsset: 0
@@ -6744,6 +6988,10 @@ Prefab:
     - target: {fileID: 400000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
@@ -6836,6 +7084,10 @@ Prefab:
     - target: {fileID: 400000, guid: 2a78383bf25603b4e9fc85d1dcd08017, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a78383bf25603b4e9fc85d1dcd08017, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a78383bf25603b4e9fc85d1dcd08017, type: 3}
@@ -6947,6 +7199,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
@@ -7117,6 +7373,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de48350c7c0c952479a962d4024f8c1c, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de48350c7c0c952479a962d4024f8c1c, type: 3}
   m_IsPrefabAsset: 0
@@ -7186,6 +7446,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
   m_IsPrefabAsset: 0
@@ -7231,6 +7495,10 @@ Prefab:
     - target: {fileID: 400000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
@@ -7346,6 +7614,10 @@ Prefab:
     - target: {fileID: 400000, guid: 376f75d7785d9814286dc3149aba3a80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 376f75d7785d9814286dc3149aba3a80, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 376f75d7785d9814286dc3149aba3a80, type: 3}
@@ -7466,6 +7738,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -60
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
   m_IsPrefabAsset: 0
@@ -7535,6 +7811,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
   m_IsPrefabAsset: 0
@@ -7584,6 +7864,10 @@ Prefab:
     - target: {fileID: 400000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
@@ -7654,6 +7938,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
   m_IsPrefabAsset: 0
@@ -7719,6 +8007,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Residential_color01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
   m_IsPrefabAsset: 0
@@ -7768,6 +8060,10 @@ Prefab:
     - target: {fileID: 400000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -240
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
@@ -7913,6 +8209,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
   m_IsPrefabAsset: 0
@@ -7981,6 +8281,10 @@ Prefab:
     - target: {fileID: 400000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
@@ -8191,6 +8495,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
   m_IsPrefabAsset: 0
@@ -8277,7 +8585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 243
+  m_RootOrder: 244
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1068922752
 Prefab:
@@ -8321,6 +8629,10 @@ Prefab:
     - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
       propertyPath: m_Name
       value: Building_Factory (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
@@ -8466,6 +8778,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
   m_IsPrefabAsset: 0
@@ -8511,6 +8827,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
       propertyPath: m_Name
       value: Building_Residential_color02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
@@ -8618,6 +8938,10 @@ Prefab:
     - target: {fileID: 400000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f5e85ddbc97e448a8e3de4ab7dc1df, type: 3}
@@ -8897,6 +9221,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 09f26cac6db363d40995140ff2f2ca4f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f26cac6db363d40995140ff2f2ca4f, type: 3}
   m_IsPrefabAsset: 0
@@ -9023,6 +9351,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
   m_IsPrefabAsset: 0
@@ -9091,6 +9423,10 @@ Prefab:
     - target: {fileID: 400000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bdd2fa54d122f489a5e7ce2c7298ac, type: 3}
@@ -9227,6 +9563,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
   m_IsPrefabAsset: 0
@@ -9276,6 +9616,10 @@ Prefab:
     - target: {fileID: 400000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
@@ -9346,6 +9690,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
   m_IsPrefabAsset: 0
@@ -9414,6 +9762,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
@@ -9615,6 +9967,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de48350c7c0c952479a962d4024f8c1c, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de48350c7c0c952479a962d4024f8c1c, type: 3}
   m_IsPrefabAsset: 0
@@ -9726,6 +10082,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 773dc6b247c57164598eb312bc63822a, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 773dc6b247c57164598eb312bc63822a, type: 3}
   m_IsPrefabAsset: 0
@@ -9790,6 +10150,10 @@ Prefab:
     - target: {fileID: 400000, guid: abade5e32dd10234c92ee2be13b91ee0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: abade5e32dd10234c92ee2be13b91ee0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abade5e32dd10234c92ee2be13b91ee0, type: 3}
@@ -9860,6 +10224,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
   m_IsPrefabAsset: 0
@@ -9929,6 +10297,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
   m_IsPrefabAsset: 0
@@ -9979,6 +10351,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
   m_IsPrefabAsset: 0
@@ -10028,6 +10404,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
@@ -10093,6 +10473,10 @@ Prefab:
     - target: {fileID: 400000, guid: 0ac008beab067b84988b1fe4131cb4ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0ac008beab067b84988b1fe4131cb4ef, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac008beab067b84988b1fe4131cb4ef, type: 3}
@@ -10163,6 +10547,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 09f26cac6db363d40995140ff2f2ca4f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f26cac6db363d40995140ff2f2ca4f, type: 3}
   m_IsPrefabAsset: 0
@@ -10232,6 +10620,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
   m_IsPrefabAsset: 0
@@ -10277,6 +10669,10 @@ Prefab:
     - target: {fileID: 100000, guid: 2233afb51d8dcd345871e53ebc904789, type: 3}
       propertyPath: m_Name
       value: Building_House_01_color02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2233afb51d8dcd345871e53ebc904789, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2233afb51d8dcd345871e53ebc904789, type: 3}
@@ -10527,6 +10923,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a78383bf25603b4e9fc85d1dcd08017, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a78383bf25603b4e9fc85d1dcd08017, type: 3}
   m_IsPrefabAsset: 0
@@ -10726,6 +11126,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 08644e19549acb547a835ce27a2ac4de, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08644e19549acb547a835ce27a2ac4de, type: 3}
   m_IsPrefabAsset: 0
@@ -10826,6 +11230,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Drug_Store (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d8210d9ecbdc2604bb1b9edfb8c53991, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8210d9ecbdc2604bb1b9edfb8c53991, type: 3}
   m_IsPrefabAsset: 0
@@ -10895,6 +11303,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
   m_IsPrefabAsset: 0
@@ -10940,6 +11352,10 @@ Prefab:
     - target: {fileID: 400000, guid: d8210d9ecbdc2604bb1b9edfb8c53991, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d8210d9ecbdc2604bb1b9edfb8c53991, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8210d9ecbdc2604bb1b9edfb8c53991, type: 3}
@@ -11023,7 +11439,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 246
+  m_RootOrder: 247
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1565974515
 Prefab:
@@ -11071,6 +11487,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
@@ -11229,6 +11649,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
   m_IsPrefabAsset: 0
@@ -11274,6 +11698,10 @@ Prefab:
     - target: {fileID: 100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
       propertyPath: m_Name
       value: Building_Residential_color01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f1c96215191bc4ba5c462dbc281198, type: 3}
@@ -11344,6 +11772,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 08644e19549acb547a835ce27a2ac4de, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08644e19549acb547a835ce27a2ac4de, type: 3}
   m_IsPrefabAsset: 0
@@ -11408,6 +11840,10 @@ Prefab:
     - target: {fileID: 100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
       propertyPath: m_Name
       value: Building_Auto_Service (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
@@ -11574,6 +12010,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
   m_IsPrefabAsset: 0
@@ -11657,6 +12097,10 @@ Prefab:
     - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
       propertyPath: m_Name
       value: Building_Sky_big_color03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
@@ -11823,6 +12267,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
   m_IsPrefabAsset: 0
@@ -11872,6 +12320,10 @@ Prefab:
     - target: {fileID: 400000, guid: 377e4f95b14851b4eb275d35f7df0a9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 377e4f95b14851b4eb275d35f7df0a9b, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377e4f95b14851b4eb275d35f7df0a9b, type: 3}
@@ -11942,6 +12394,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
   m_IsPrefabAsset: 0
@@ -11988,6 +12444,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Residential_color03 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
   m_IsPrefabAsset: 0
@@ -12029,6 +12489,10 @@ Prefab:
     - target: {fileID: 400000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
       propertyPath: m_RootOrder
       value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
@@ -12094,6 +12558,10 @@ Prefab:
     - target: {fileID: 400000, guid: e47dc4e2a7cb5bb479e17c119279b76e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e47dc4e2a7cb5bb479e17c119279b76e, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e47dc4e2a7cb5bb479e17c119279b76e, type: 3}
@@ -12231,6 +12699,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 127
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 377e4f95b14851b4eb275d35f7df0a9b, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377e4f95b14851b4eb275d35f7df0a9b, type: 3}
   m_IsPrefabAsset: 0
@@ -12299,6 +12771,10 @@ Prefab:
     - target: {fileID: 400000, guid: 377e4f95b14851b4eb275d35f7df0a9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 377e4f95b14851b4eb275d35f7df0a9b, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377e4f95b14851b4eb275d35f7df0a9b, type: 3}
@@ -12546,6 +13022,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 135
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 694da983a356c8d48a862b06c36165d5, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 694da983a356c8d48a862b06c36165d5, type: 3}
   m_IsPrefabAsset: 0
@@ -12673,6 +13153,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
   m_IsPrefabAsset: 0
@@ -12719,6 +13203,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Residential_color03 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
   m_IsPrefabAsset: 0
@@ -12760,6 +13248,10 @@ Prefab:
     - target: {fileID: 400000, guid: 376f75d7785d9814286dc3149aba3a80, type: 3}
       propertyPath: m_RootOrder
       value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 376f75d7785d9814286dc3149aba3a80, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 376f75d7785d9814286dc3149aba3a80, type: 3}
@@ -12864,6 +13356,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 173
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 08644e19549acb547a835ce27a2ac4de, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08644e19549acb547a835ce27a2ac4de, type: 3}
   m_IsPrefabAsset: 0
@@ -12932,6 +13428,10 @@ Prefab:
     - target: {fileID: 400000, guid: de48350c7c0c952479a962d4024f8c1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de48350c7c0c952479a962d4024f8c1c, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de48350c7c0c952479a962d4024f8c1c, type: 3}
@@ -13025,6 +13525,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
   m_IsPrefabAsset: 0
@@ -13094,6 +13598,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa34c43d5931c804588eedc53348dff9, type: 3}
   m_IsPrefabAsset: 0
@@ -13135,6 +13643,10 @@ Prefab:
     - target: {fileID: 400000, guid: ad9dea1ff4a949240aa261e3e57b4e38, type: 3}
       propertyPath: m_RootOrder
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ad9dea1ff4a949240aa261e3e57b4e38, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9dea1ff4a949240aa261e3e57b4e38, type: 3}
@@ -13204,6 +13716,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
@@ -13321,6 +13837,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bd1b765d795d479758565fbe21948, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e80bd1b765d795d479758565fbe21948, type: 3}
   m_IsPrefabAsset: 0
@@ -13432,6 +13952,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
   m_IsPrefabAsset: 0
@@ -13482,6 +14006,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
   m_IsPrefabAsset: 0
@@ -13527,6 +14055,10 @@ Prefab:
     - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
       propertyPath: m_Name
       value: Building_Factory (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
@@ -13634,6 +14166,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d79982e6c21de5498b5d33dfb150aa0, type: 3}
@@ -13816,6 +14352,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
   m_IsPrefabAsset: 0
@@ -13928,6 +14468,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Sky_small_color02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
   m_IsPrefabAsset: 0
@@ -13996,6 +14540,10 @@ Prefab:
     - target: {fileID: 400000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f90657b8d7173d45988c816176cd322, type: 3}
@@ -14066,6 +14614,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 240
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9cc95400dbf59468eb97b7aa2c2e43, type: 3}
   m_IsPrefabAsset: 0
@@ -14134,6 +14686,10 @@ Prefab:
     - target: {fileID: 400000, guid: d8210d9ecbdc2604bb1b9edfb8c53991, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d8210d9ecbdc2604bb1b9edfb8c53991, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8210d9ecbdc2604bb1b9edfb8c53991, type: 3}
@@ -14403,6 +14959,10 @@ Prefab:
       propertyPath: m_Name
       value: Building_Gift_Shop (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484a0383c8ed8ec458a4d0b2d851e5b4, type: 3}
   m_IsPrefabAsset: 0
@@ -14463,6 +15023,10 @@ Prefab:
     - target: {fileID: 400000, guid: 87a46442fe686514db3b4ea4bcf9de01, type: 3}
       propertyPath: m_RootOrder
       value: 157
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 87a46442fe686514db3b4ea4bcf9de01, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a46442fe686514db3b4ea4bcf9de01, type: 3}
@@ -14575,6 +15139,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ae1554f07dfb1fa43a327cd3bd67be93, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae1554f07dfb1fa43a327cd3bd67be93, type: 3}
   m_IsPrefabAsset: 0
@@ -14643,6 +15211,10 @@ Prefab:
     - target: {fileID: 400000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e554c0264c0ebd4498fca6efad7b035f, type: 3}
@@ -14789,6 +15361,10 @@ Prefab:
     - target: {fileID: 400000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
@@ -14981,6 +15557,10 @@ Prefab:
     - target: {fileID: 400000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
@@ -15238,6 +15818,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99308740406d9e4fadffd6daaf4f968, type: 3}
   m_IsPrefabAsset: 0
@@ -15345,6 +15929,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de8f0735de8bced4c8cc069d2c35a32e, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de8f0735de8bced4c8cc069d2c35a32e, type: 3}
   m_IsPrefabAsset: 0
@@ -15413,6 +16001,10 @@ Prefab:
     - target: {fileID: 400000, guid: de8f0735de8bced4c8cc069d2c35a32e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de8f0735de8bced4c8cc069d2c35a32e, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de8f0735de8bced4c8cc069d2c35a32e, type: 3}
@@ -15567,6 +16159,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4da34ea158e841543a8bd596681d3ad7, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4da34ea158e841543a8bd596681d3ad7, type: 3}
   m_IsPrefabAsset: 0
@@ -15628,6 +16224,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 190
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c329ba2b9475a574db976f46cc4fe550, type: 3}
   m_IsPrefabAsset: 0
@@ -15688,6 +16288,10 @@ Prefab:
     - target: {fileID: 400000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
       propertyPath: m_RootOrder
       value: 168
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f713078cd8e50b04e9663f4082e62518, type: 3}
@@ -15803,6 +16407,10 @@ Prefab:
     - target: {fileID: 400000, guid: 87a46442fe686514db3b4ea4bcf9de01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 87a46442fe686514db3b4ea4bcf9de01, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a46442fe686514db3b4ea4bcf9de01, type: 3}
@@ -15996,6 +16604,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
+      propertyPath: m_TagString
+      value: Collision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2580f0e9335be6479487bf8cd3f68eb, type: 3}
   m_IsPrefabAsset: 0
@@ -16125,6 +16737,10 @@ Prefab:
     - target: {fileID: 400000, guid: 6ed5b1b0eea1836429384a11c4cff24a, type: 3}
       propertyPath: m_RootOrder
       value: 151
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6ed5b1b0eea1836429384a11c4cff24a, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ed5b1b0eea1836429384a11c4cff24a, type: 3}
