@@ -1219,6 +1219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4d79af7b1721d45b24e44dc79c6dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
+  audioManager: {fileID: 0}
+  speed: 0
   carTransform: {fileID: 4847657184111012}
   carBody: {fileID: 54247707438569792}
   maxSteerAngle: 15

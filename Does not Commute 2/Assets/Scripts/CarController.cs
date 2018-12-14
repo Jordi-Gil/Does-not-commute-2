@@ -18,6 +18,10 @@ public class CarController : MonoBehaviour
 {
     #region Variables
     [SerializeField]
+    private LevelManager levelManager;
+    [SerializeField]
+    private AudioManager audioManager;
+    [SerializeField]
     private float speed;
     [SerializeField]
     private Transform carTransform;
@@ -42,7 +46,7 @@ public class CarController : MonoBehaviour
     private float steerInput;
     private float steeringAngle;
     private float motorTorque;
-    private LevelManager levelManager;
+    
     private float motorForceOrig;
 
     [SerializeField]
@@ -54,6 +58,7 @@ public class CarController : MonoBehaviour
     {
         motorForceOrig = motorForce;
         levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         path = new List<PointInTime>();
         
         carBody.centerOfMass = Vector3.down;
@@ -111,13 +116,15 @@ public class CarController : MonoBehaviour
         {
             Debug.Log(other.name);
             levelManager.BoostTime(10f);
+            audioManager.BoostSound();
             other.gameObject.SetActive(false);
-            other.gameObject.GetComponent<AudioSource>().Play();
+            
         }else if (other.gameObject.CompareTag("Boost20"))
         {
             Debug.Log(other.name);
             levelManager.BoostTime(20f);
             other.gameObject.SetActive(false);
+            audioManager.BoostSound();
             other.gameObject.GetComponent<AudioSource>().Play();
         }
         else if(other.gameObject.CompareTag("Boost50"))
@@ -125,6 +132,7 @@ public class CarController : MonoBehaviour
              Debug.Log(other.name);
             levelManager.BoostTime(50f);
             other.gameObject.SetActive(false);
+            audioManager.BoostSound();
             other.gameObject.GetComponent<AudioSource>().Play();
         }
 

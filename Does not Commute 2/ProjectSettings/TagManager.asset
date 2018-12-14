@@ -44,6 +44,9 @@ TagManager:
   - Boost50
   - NoCollision
   - Collision
+  - CheckPoint1
+  - CheckPoint0
+  - AudioManager
   layers:
   - Default
   - TransparentFX

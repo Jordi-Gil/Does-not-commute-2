@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114663784102560400}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,3 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4489189441a1e5647baf160db1106c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: c78dbe4c4e723794d9979a005aaa37c7, type: 3}

@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    #region Variables
+    [SerializeField]
+    private AudioSource audio;
+    [SerializeField]
+    private List<AudioClip> clips;
+    #endregion
+
+    #region Public Methods
+    private void Start ()
+    {
+        if (clips == null) clips = new List<AudioClip>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    #endregion
+
+    #region Public Methods
+    public void BoostSound()
+    {
+        
+        audio.PlayOneShot(clips[0]);
+    }
+    #endregion
 }
