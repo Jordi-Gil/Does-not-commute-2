@@ -186,6 +186,11 @@ public class LevelManager : MonoBehaviour
         pathCompleted.Clear();
         Initalize();
     }
+
+    public void BoostTime(float _value)
+    {
+        timeLeft += _value;
+    }
     #endregion
 
     #region Private Methods
@@ -195,7 +200,7 @@ public class LevelManager : MonoBehaviour
         MakePaths();
         maxRounds = paths.Count;
         activeCar = paths[round].p_car;
-        scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
+        if (scriptArrow != null) scriptArrow.setTarget(Instantiate(paths[round].p_end), activeCar);
         if (scriptRain != null) scriptRain.setTarget(activeCar);
         activeCar.SetActive(true);
         scriptCamera.ChangeTarget(activeCar);
@@ -223,6 +228,10 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(pathComp.getCar());
         }
+
+        if (SceneManager.GetActiveScene().name == "Level1") SceneManager.LoadScene("Level2");
+        else if (SceneManager.GetActiveScene().name == "Level2") SceneManager.LoadScene("Level3");
+        else if (SceneManager.GetActiveScene().name == "Level3") SceneManager.LoadScene("Menu");
     }
     #endregion
 }

@@ -19,6 +19,8 @@ public class CarController : MonoBehaviour
 
     #region Variables
     [SerializeField]
+    private float speed;
+    [SerializeField]
     private Transform carTransform;
     [SerializeField]
     private Rigidbody carBody;
@@ -42,6 +44,7 @@ public class CarController : MonoBehaviour
     private float steeringAngle;
     private float motorTorque;
     private LevelManager levelManager;
+    private float motorForceOrig;
 
     [SerializeField]
     private List<PointInTime> path;
@@ -50,6 +53,7 @@ public class CarController : MonoBehaviour
     #region Unity Methods
     private void Start()
     {
+        motorForceOrig = motorForce;
         levelManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
         path = new List<PointInTime>();
         
@@ -58,6 +62,7 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        speed = carBody.velocity.magnitude * 3.6f;
         if (controlUser)
         {
             GetInput();
@@ -73,21 +78,54 @@ public class CarController : MonoBehaviour
         }
     }
 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Collision"))
+        {
+            if(speed > 35f) { 
+                gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                motorForce -= 20f;
+            }
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(gameObject.tag+"end"))
+       
+        if (other.gameObject.CompareTag(gameObject.tag + "end"))
         {
+            Debug.Log(other.name);
             if (controlUser)
             {
                 gameObject.SetActive(false);
                 carBody.isKinematic = true;
-                levelManager.NextRound(path);   
+                levelManager.NextRound(path);
             }
             else
             {
                 gameObject.SetActive(false);
             }
         }
+        else if (other.gameObject.CompareTag("Boost10"))
+        {
+            Debug.Log(other.name);
+            levelManager.BoostTime(10f);
+            other.gameObject.SetActive(false);
+        }else if (other.gameObject.CompareTag("Boost20"))
+        {
+            Debug.Log(other.name);
+            levelManager.BoostTime(20f);
+            other.gameObject.SetActive(false);
+        }
+        else if(other.gameObject.CompareTag("Boost50"))
+        {
+             Debug.Log(other.name);
+            levelManager.BoostTime(50f);
+            other.gameObject.SetActive(false);
+        }
+
+
     }
     #endregion
 

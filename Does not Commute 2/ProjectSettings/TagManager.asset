@@ -39,6 +39,11 @@ TagManager:
   - Car11
   - Car11start
   - Car11end
+  - Boost10
+  - Boost20
+  - Boost50
+  - NoCollision
+  - Collision
   layers:
   - Default
   - TransparentFX
