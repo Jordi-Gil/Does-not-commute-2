@@ -8,13 +8,16 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class TransformPair
 {
+    #region Variables
     [SerializeField]
     private GameObject car;
     [SerializeField]
     private GameObject start;
     [SerializeField]
     private GameObject end;
+    #endregion
 
+    #region Public Methods
     public TransformPair(GameObject _car, GameObject _start, GameObject _end)
     {
         car = _car;
@@ -24,6 +27,7 @@ public class TransformPair
     public GameObject p_start { set { start = value; } get { return start; } }
     public GameObject p_end { set { end = value; } get { return end; } }
     public GameObject p_car { set { car = value; } get { return car; } }
+    #endregion
 }
 
 public class LevelManager : MonoBehaviour
@@ -62,6 +66,8 @@ public class LevelManager : MonoBehaviour
     #region Main Methods
     private void Start ()
     {
+        Debug.Log("Start");
+        Debug.Log(time);
         timeLeft = time;
         timeIniRound = timeLeft;
         pathCompleted = new List<PathCompleted>();
@@ -190,6 +196,11 @@ public class LevelManager : MonoBehaviour
     public void BoostTime(float _value)
     {
         timeLeft += _value;
+    }
+
+    public void Teleport()
+    {
+        activeCar.transform.position = paths[round].p_end.transform.position;
     }
     #endregion
 

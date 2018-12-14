@@ -6,17 +6,17 @@ public class CanvasManager : MonoBehaviour {
 
 
     public static bool isPaused;
-    
-
+    #region Variables
     [SerializeField]
     private GameObject pauseMenuUI;
     [SerializeField]
     private GameObject outOfTimeUI;
     [SerializeField]
     private LevelManager manager;
-	
-	
-	void Update ()
+    #endregion
+
+    #region Unity Methods
+    private void Update ()
     {
         if (LevelManager.isLose)
         {
@@ -37,10 +37,11 @@ public class CanvasManager : MonoBehaviour {
             }
 	    }
     }
+    #endregion
 
+    #region Public Methods
     public void Resume()
     {
-        Debug.Log("Resuming...");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
@@ -48,7 +49,6 @@ public class CanvasManager : MonoBehaviour {
 
     public void RestartRound()
     {
-        Debug.Log("Restarting Round...");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
@@ -57,7 +57,6 @@ public class CanvasManager : MonoBehaviour {
 
     public void RestartLevel()
     {
-        Debug.Log("Restarting Level...");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
@@ -66,8 +65,8 @@ public class CanvasManager : MonoBehaviour {
 
     public void Exit()
     {
-        Debug.Log("Exitting...");
         pauseMenuUI.SetActive(false);
+        LevelManager.isLose = false;
         outOfTimeUI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
@@ -76,7 +75,6 @@ public class CanvasManager : MonoBehaviour {
 
     public void RestartGame()
     {
-        Debug.Log("Restarting Game");
         LevelManager.isLose = false;
         outOfTimeUI.SetActive(false);
         Time.timeScale = 1;
@@ -85,11 +83,9 @@ public class CanvasManager : MonoBehaviour {
 
     private void Pause()
     {
-        Debug.Log("Pausing");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         isPaused = true;
     }
-
-    
+    #endregion
 }

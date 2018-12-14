@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class RainManager : MonoBehaviour
 {
-
+    #region Variables
     [SerializeField]
     private GameObject player;
     [SerializeField]
     private Transform particleSystemTransform;
-    // Use this for initialization
-    void Start () {
+    #endregion
+
+    #region Unity Methods
+    private void Start () {
         particleSystemTransform = GetComponent<Transform>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Update () {
         Vector3 finalPosition = player.transform.position;
         finalPosition.y += 40f;
         particleSystemTransform.position = Vector3.Lerp(particleSystemTransform.position, finalPosition, 20);
     }
 
+    #endregion
+
+    #region Public Methods
     public void setTarget(GameObject _player)
     {
         player = _player;
     }
+    #endregion
 }

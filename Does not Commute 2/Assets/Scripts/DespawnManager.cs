@@ -8,7 +8,7 @@ public class DespawnManager : MonoBehaviour
     private Color color;
     #endregion
 
-    #region Main Methods
+    #region Unity Methods
     
     private void OnDrawGizmos()
     {
@@ -18,6 +18,4 @@ public class DespawnManager : MonoBehaviour
     }
     #endregion
 
-    #region Helper Method
-    #endregion
 }

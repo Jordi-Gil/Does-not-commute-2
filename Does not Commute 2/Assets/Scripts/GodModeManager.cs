@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GodModeManager : MonoBehaviour {
+public class GodModeManager : MonoBehaviour
+{
+    #region Variables
+    [SerializeField]
+    private LevelManager levelManager;
+    #endregion
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    #region Unity Methods
+    private void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.N))
+        {
+            Debug.Log("Teleporting");
+            levelManager.Teleport();
+        }
+    }
+    #endregion
+
 }

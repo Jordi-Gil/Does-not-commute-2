@@ -15,11 +15,10 @@ public class TopDownCamera : MonoBehaviour {
     private float smoothVelocity = 10f;
     
     private Transform cameraTransform;
-    
+
     #endregion
 
-
-    #region Main Method
+    #region Unity Methods
     private void Start ()
     {
         cameraTransform = GetComponent<Transform>();
@@ -28,15 +27,15 @@ public class TopDownCamera : MonoBehaviour {
         if (targetTransform != null)
             HandleCamera();
     }
-    #endregion   
-
+ 
     private void Update ()
     {
         if(targetTransform != null)
             HandleCamera();
     }
+    #endregion
 
-    #region Helper Methods
+    #region Private Methods
     private void HandleCamera()
     {
 

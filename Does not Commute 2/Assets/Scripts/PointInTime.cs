@@ -3,6 +3,7 @@
 [System.Serializable]
 public class PointInTime
 {
+    #region Public Methods
     public PointInTime(Vector3 _position, Quaternion _rotation)
     {
         position = _position;
@@ -28,10 +29,12 @@ public class PointInTime
     {
         return rotation;
     }
+    #endregion
 
+    #region Variables
     [SerializeField]
     private Vector3 position;
     [SerializeField]
     private Quaternion rotation;
-
+    #endregion
 }

@@ -16,7 +16,6 @@ public struct CarAxis
 
 public class CarController : MonoBehaviour
 {
-
     #region Variables
     [SerializeField]
     private float speed;
@@ -78,18 +77,19 @@ public class CarController : MonoBehaviour
         }
     }
 
-
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Collision"))
         {
-            if(speed > 35f) { 
+            Debug.Log(speed);
+            if(speed > 45f) { 
                 gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 motorForce -= 20f;
             }
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
        

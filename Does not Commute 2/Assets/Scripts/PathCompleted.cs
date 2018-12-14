@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class PathCompleted
 {
+    #region Public Methods
     public PathCompleted(GameObject _car, Vector3 _startPosition, Quaternion _startRotation, Vector3 _destination, List<PointInTime> _path)
     {
         car = _car;
@@ -37,7 +38,9 @@ public class PathCompleted
     {
         _path = path;
     }
+    #endregion
 
+    #region Variables
     [SerializeField]
     private GameObject car;
     [SerializeField]
@@ -48,4 +51,5 @@ public class PathCompleted
     private Vector3 destination;
     [SerializeField]
     private List<PointInTime> path;
+    #endregion
 }

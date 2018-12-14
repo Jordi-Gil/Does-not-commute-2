@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33597591689547708}
   - component: {fileID: 23976581694378564}
   - component: {fileID: 65541273527887776}
-  - component: {fileID: 81114795878266134}
   - component: {fileID: 82100641107770232}
   m_Layer: 0
   m_Name: Boost50
@@ -38,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1141709745097934}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -26, y: 0.6, z: -42.5}
+  m_LocalPosition: {x: -157.1, y: 0.6, z: -124.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,13 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 4, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!81 &81114795878266134
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1141709745097934}
-  m_Enabled: 1
 --- !u!82 &82100641107770232
 AudioSource:
   m_ObjectHideFlags: 1
