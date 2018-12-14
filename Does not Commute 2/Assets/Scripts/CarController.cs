@@ -112,17 +112,20 @@ public class CarController : MonoBehaviour
             Debug.Log(other.name);
             levelManager.BoostTime(10f);
             other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<AudioSource>().Play();
         }else if (other.gameObject.CompareTag("Boost20"))
         {
             Debug.Log(other.name);
             levelManager.BoostTime(20f);
             other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<AudioSource>().Play();
         }
         else if(other.gameObject.CompareTag("Boost50"))
         {
              Debug.Log(other.name);
             levelManager.BoostTime(50f);
             other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<AudioSource>().Play();
         }
 
 
